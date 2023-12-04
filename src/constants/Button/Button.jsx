@@ -1,6 +1,6 @@
 import React from "react";
 import Add from "../../assets/icons/add.svg"
-const Button = ({ onClick, children, type = "button", className = "" }) => {
+const Button = ({ onClick, children, type = "button", className = ""}) => {
   return (
     <button
       onClick={onClick}

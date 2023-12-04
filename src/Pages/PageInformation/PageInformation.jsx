@@ -21,7 +21,7 @@ const PageInformation = () => {
       </div>
 
       <Modal open={open} setOpen={setOpen}>
-        <div>
+        <div className="w-[378px]">
           <form>
             <InputFile
               type={"file"}

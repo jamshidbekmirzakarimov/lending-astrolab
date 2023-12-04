@@ -7,7 +7,7 @@ import InputField from "../../constants/InputField/InputField";
 const Auth = () => {
   return (
     <div className="w-full h-[100vh] flex items-center">
-      <img className="w-[50%] h-[100vh]" src={ImgLogin} alt="" />
+      <iframe  className="w-[50%] h-[100vh]" src="https://lottie.host/embed/b335ea8f-2ea3-4a37-a0a1-9208ad54e46c/YLPbu1qOTF.json"></iframe>
       <div className="w-[50%] flex items-center justify-center flex-col">
         <div className="flex items-center justify-center flex-col">
           <img src={AstrolabLogo} alt="" />
