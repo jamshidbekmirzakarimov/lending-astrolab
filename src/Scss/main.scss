@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   height: 100%;
   margin: 0;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   font-style: normal;
   background-color: #fff;
 }
@@ -40,7 +40,6 @@ img {
   overflow: hidden;
 }
 
-
 /* CONTAINER */
 .container {
   max-width: 1240px;
@@ -50,6 +49,12 @@ img {
   padding-left: 20px;
 }
 
-.ant-modal{
+.ant-modal {
   width: auto !important;
 }
+
+.mulish {
+  font-style: normal;
+  font-family: "Mulish", sans-serif;
+}
+
