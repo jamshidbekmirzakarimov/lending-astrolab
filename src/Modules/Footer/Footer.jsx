@@ -1,9 +1,85 @@
-import React from 'react'
-
+import React from "react";
+import AstrolabLogo from "../../assets/icons/astrolab-logo.svg";
+import Call from "../../assets/icons/call.svg";
+import Sms from "../../assets/icons/Sms.svg";
+import TelegramChat from "../../assets/icons/telegram-chat.svg";
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="py-[40px]">
+      <div className="container">
+        <div className="flex items-center justify-between mb-[20px]">
+          <div className="flex items-center">
+            <img
+              className="me-[40px]"
+              src={AstrolabLogo}
+              alt="astrolab logo"
+              width={137}
+              height={50}
+            />
+            <ul className="flex items-center gap-[60px]">
+              <li>
+                <a
+                  className="mulish text-[16px] leading-normal font-normal before:content-[''] "
+                  href="#"
+                >
+                  About us
+                </a>
+              </li>
+              <li>
+                <a
+                  className="mulish text-[16px] leading-normal font-normal before:content-[''] "
+                  href="#"
+                >
+                  Benefits
+                </a>
+              </li>
+              <li>
+                <a
+                  className="mulish text-[16px] leading-normal font-normal before:content-[''] "
+                  href="#"
+                >
+                  Products
+                </a>
+              </li>
+              <li>
+                <a
+                  className="mulish text-[16px] leading-normal font-normal before:content-[''] "
+                  href="#"
+                >
+                  Reviews
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="flex items-center gap-[12px] mb-[20px]">
+          <a
+              className="flex items-center gap-[6px]"
+              href="tel:+998991234567"
+            >
+              <img src={Call} alt="call" />
+              <p>+998 99 123 45 67</p>
+            </a>
+            <a
+              className="flex items-center gap-[6px]"
+              href="mailto:astrolab@gmail.com"
+            >
+              <img src={Sms} alt="call" />
+              <p>astrolab@gmail.com</p>
+            </a>
+            <a
+              className="flex items-center gap-[6px]"
+              href="mailto:astrolab@gmail.com"
+            >
+              <img src={TelegramChat} alt="call" />
+              <p> Telegram Chat</p>
+            </a>
+          </div>
+        </div>
+        <p>Astrolab jamoasi uzoq yillar davomida sizga qulay va foydali dastur yaratish uchun xizmat qilib kelmoqda. Bizni tanlaganingiz uchun rahmat!!!  </p>
 
-export default Footer
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

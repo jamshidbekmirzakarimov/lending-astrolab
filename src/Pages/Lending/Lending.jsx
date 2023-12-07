@@ -1,30 +1,40 @@
 import React from "react";
 import {
+  AstroProduct,
   Automation,
   Benefits,
   Business,
+  Customers,
   Footer,
   Header,
   Hero,
   ManageMobileWorker,
+  OurClients,
+  Price,
+  RequestDemo,
+  Social,
   Solutions,
 } from "../../Modules";
 
 const Lending = () => {
   return (
     <>
-      <div className="grid grid-rows-[auto_1fr_auto] h-screen">
-        <Header />
-        <main>
-          <Hero />
-          <Solutions />
-          <Benefits />
-          <ManageMobileWorker />
-          <Business />
-          <Automation />
-        </main>
-        <Footer />
-      </div>
+      <Header />
+      <main>
+        <Hero />
+        <Solutions />
+        <Benefits />
+        <ManageMobileWorker />
+        <Business />
+        <Automation />
+        <AstroProduct />
+        <Price />
+        <OurClients />
+        <Customers />
+        <RequestDemo />
+        <Social />
+      </main>
+      <Footer />
     </>
   );
 };
