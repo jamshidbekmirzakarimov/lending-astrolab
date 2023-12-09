@@ -1,6 +1,7 @@
 import React from "react";
 import "./Solutions.scss";
 import Solution from "../../assets/images/solution-img.jpg";
+import { useState } from "react";
 const Solutions = () => {
   return (
     <section className=" pt-[146px] pb-[115px] bg-[#F4F4FF]">
@@ -18,124 +19,124 @@ const Solutions = () => {
               Xodimlar faoliyatini boshqarishni avtomatlashtirish uchun biznesga
               nima xalaqit beradi?
             </h2>
-         <div className="absolute">
-         <details>
-              <summary className="mb-[-1px]">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-[16px]">
-                    <div className="w-[30px] h-[30px] border border-[#000] rounded-[50%] flex items-center justify-center">
-                      <p className="font-semibold text-[12px] text-black ">1</p>
+            <div className="absolute">
+              <details>
+                <summary
+                  className="mb-[-1px]"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-[16px]">
+                      <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
+                        <p className="one-line-title font-semibold text-[12px] text-black ">
+                          1
+                        </p>
+                      </div>
+                      <span class="summary-title">
+                        Yechimlarning yuqori qiymati
+                      </span>
                     </div>
-                    <span class="summary-title">
-                      Yechimlarning yuqori qiymati
-                    </span>
+                    <div class="summary-chevron-up">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M0.192383 6.45471C0.192383 6.25315 0.27207 6.04688 0.426758 5.89219C0.736133 5.58281 1.24238 5.58281 1.55176 5.89219L12.1408 16.4812L22.5752 6.04687C22.8846 5.7375 23.3908 5.7375 23.7002 6.04687C24.0096 6.35625 24.0096 6.8625 23.7002 7.17187L12.7033 18.1734C12.3939 18.4828 11.8877 18.4828 11.5783 18.1734L0.426758 7.02187C0.267383 6.8625 0.192383 6.66094 0.192383 6.45471Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                  <div class="summary-chevron-up">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M0.192383 6.45471C0.192383 6.25315 0.27207 6.04688 0.426758 5.89219C0.736133 5.58281 1.24238 5.58281 1.55176 5.89219L12.1408 16.4812L22.5752 6.04687C22.8846 5.7375 23.3908 5.7375 23.7002 6.04687C24.0096 6.35625 24.0096 6.8625 23.7002 7.17187L12.7033 18.1734C12.3939 18.4828 11.8877 18.4828 11.5783 18.1734L0.426758 7.02187C0.267383 6.8625 0.192383 6.66094 0.192383 6.45471Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
+                </summary>
+
+                <div class="summary-content">
+                  Biometrik uskunalarni xarid qilish, ularning montaji va
+                  dasturiy ta’minotiga ulkan mablag‘larni investitsiya qilish
+                  zarurati.
                 </div>
-              </summary>
+              </details>
 
-              <div class="summary-content">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
-                dolor laboriosam voluptas architecto at harum officia eum
-                tempore aperiam animi recusandae officiis praesentium nostrum
-                cum, magni molestiae vero, libero reprehenderit consequuntur
-                repudiandae? Dolore architecto itaque eveniet cum molestiae!
-                Autem corrupti aut nam quam officiis inventore? Expedita
-                quibusdam animi commodi earum?
-              </div>
-            </details>
-
-            <details>
-              <summary className="mb-[-1px]">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-[16px]">
-                    <div className="w-[30px] h-[30px] border border-[#000] rounded-[50%] flex items-center justify-center">
-                      <p className="font-semibold text-[12px] text-black ">2</p>
-                    </div>
-                    <span class="summary-title">
+              <details>
+                <summary
+                  className="mb-[-1px]"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-[16px]">
+                      <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
+                        <p className="one-line-title font-semibold text-[12px] text-black ">
+                          2
+                        </p>
+                      </div>
+                      <span class="summary-title">
                       Murakkab integratsiya jarayoni
-                    </span>
-                  </div>
-                  <div class="summary-chevron-up">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M0.192383 6.45471C0.192383 6.25315 0.27207 6.04688 0.426758 5.89219C0.736133 5.58281 1.24238 5.58281 1.55176 5.89219L12.1408 16.4812L22.5752 6.04687C22.8846 5.7375 23.3908 5.7375 23.7002 6.04687C24.0096 6.35625 24.0096 6.8625 23.7002 7.17187L12.7033 18.1734C12.3939 18.4828 11.8877 18.4828 11.5783 18.1734L0.426758 7.02187C0.267383 6.8625 0.192383 6.66094 0.192383 6.45471Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </summary>
-
-              <div class="summary-content">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
-                dolor laboriosam voluptas architecto at harum officia eum
-                tempore aperiam animi recusandae officiis praesentium nostrum
-                cum, magni molestiae vero, libero reprehenderit consequuntur
-                repudiandae? Dolore architecto itaque eveniet cum molestiae!
-                Autem corrupti aut nam quam officiis inventore? Expedita
-                quibusdam animi commodi earum?
-              </div>
-            </details>
-
-            <details>
-              <summary>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-[16px]">
-                    <div className="w-[30px] h-[30px] border border-[#000] rounded-[50%] flex items-center justify-center">
-                      <p className="font-semibold text-[12px] text-black ">3</p>
+                      </span>
                     </div>
-                    <span class="summary-title">
-                      Investitsiyalar qaytishining uzoq muddati
-                    </span>
+                    <div class="summary-chevron-up">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M0.192383 6.45471C0.192383 6.25315 0.27207 6.04688 0.426758 5.89219C0.736133 5.58281 1.24238 5.58281 1.55176 5.89219L12.1408 16.4812L22.5752 6.04687C22.8846 5.7375 23.3908 5.7375 23.7002 6.04687C24.0096 6.35625 24.0096 6.8625 23.7002 7.17187L12.7033 18.1734C12.3939 18.4828 11.8877 18.4828 11.5783 18.1734L0.426758 7.02187C0.267383 6.8625 0.192383 6.66094 0.192383 6.45471Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                  <div class="summary-chevron-up">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M0.192383 6.45471C0.192383 6.25315 0.27207 6.04688 0.426758 5.89219C0.736133 5.58281 1.24238 5.58281 1.55176 5.89219L12.1408 16.4812L22.5752 6.04687C22.8846 5.7375 23.3908 5.7375 23.7002 6.04687C24.0096 6.35625 24.0096 6.8625 23.7002 7.17187L12.7033 18.1734C12.3939 18.4828 11.8877 18.4828 11.5783 18.1734L0.426758 7.02187C0.267383 6.8625 0.192383 6.66094 0.192383 6.45471Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </summary>
+                </summary>
 
-              <div class="summary-content">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
-                dolor laboriosam voluptas architecto at harum officia eum
-                tempore aperiam animi recusandae officiis praesentium nostrum
-                cum, magni molestiae vero, libero reprehenderit consequuntur
-                repudiandae? Dolore architecto itaque eveniet cum molestiae!
-                Autem corrupti aut nam quam officiis inventore? Expedita
-                quibusdam animi commodi earum?
-              </div>
-            </details>
-         </div>
+                <div class="summary-content">
+                  Biometrik uskunalarni xarid qilish, ularning montaji va
+                  dasturiy ta’minotiga ulkan mablag‘larni investitsiya qilish
+                  zarurati.
+                </div>
+              </details>
+
+              <details>
+                <summary
+                  className="mb-[-1px]"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-[16px]">
+                      <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
+                        <p className="one-line-title font-semibold text-[12px] text-black ">
+                          3
+                        </p>
+                      </div>
+                      <span class="summary-title">
+                      Investitsiyalar qaytishining uzoq muddati
+                      </span>
+                    </div>
+                    <div class="summary-chevron-up">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M0.192383 6.45471C0.192383 6.25315 0.27207 6.04688 0.426758 5.89219C0.736133 5.58281 1.24238 5.58281 1.55176 5.89219L12.1408 16.4812L22.5752 6.04687C22.8846 5.7375 23.3908 5.7375 23.7002 6.04687C24.0096 6.35625 24.0096 6.8625 23.7002 7.17187L12.7033 18.1734C12.3939 18.4828 11.8877 18.4828 11.5783 18.1734L0.426758 7.02187C0.267383 6.8625 0.192383 6.66094 0.192383 6.45471Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </summary>
+
+                <div class="summary-content">
+                  Biometrik uskunalarni xarid qilish, ularning montaji va
+                  dasturiy ta’minotiga ulkan mablag‘larni investitsiya qilish
+                  zarurati.
+                </div>
+              </details>
+            </div>
           </div>
         </div>
       </div>

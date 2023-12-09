@@ -6,13 +6,14 @@ import { Pagination } from "swiper/modules";
 import Intel from "../../assets/icons/intel.svg";
 import "./Customers.scss";
 import Customers1 from "../../assets/images/customers1.jpg";
+import Customers2 from "../../assets/images/customers2.jpg";
 import VidePlayer from "../../assets/icons/video-player.svg";
 const Customers = () => {
   const data = [
     { id: 1, image: Customers1 },
-    { id: 2, image: Customers1 },
+    { id: 2, image: Customers2 },
     { id: 3, image: Customers1 },
-    { id: 4, image: Customers1 },
+    { id: 4, image: Customers2 },
   ];
 
   return (

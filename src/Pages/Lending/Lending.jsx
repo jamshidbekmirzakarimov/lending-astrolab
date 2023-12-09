@@ -16,9 +16,25 @@ import {
   Solutions,
 } from "../../Modules";
 
+import { motion, useScroll } from "framer-motion";
+
 const Lending = () => {
+  const { scrollYProgress } = useScroll();
   return (
     <>
+      <motion.div
+        style={{
+          scaleX: scrollYProgress,
+          position: "fixed",
+          top: 0,
+          right: 0,
+          left: 0,
+          height: 10,
+          background: "red",
+          transformOrigin: "0%",
+          zIndex: 999999
+        }}
+      ></motion.div>
       <Header />
       <main>
         <Hero />

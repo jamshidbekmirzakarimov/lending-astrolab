@@ -5,7 +5,7 @@ import Sms from "../../assets/icons/Sms.svg";
 import TelegramChat from "../../assets/icons/telegram-chat.svg";
 const Footer = () => {
   return (
-    <footer className="py-[40px]">
+    <footer className="py-[40px] bg-[#F4F4FF]">
       <div className="container">
         <div className="flex items-center justify-between mb-[20px]">
           <div className="flex items-center">

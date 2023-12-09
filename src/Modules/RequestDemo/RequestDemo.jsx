@@ -12,7 +12,7 @@ const RequestDemo = () => {
             <h2 className="mb-[16px] mulish font-semibold text-[40px] text-[#000] leading-normal">
               Demoni so’rash
             </h2>
-            <p className="w-full border-b-[1px] border-[#D5D5D8] max-w-[562px] mulish font-medium text-[16px] leading-[24px] text-[#00000099] mb-[60px] pb-[60px]">
+            <p className="w-full border-b-[1px] border-[#000] max-w-[562px] mulish font-medium text-[16px] leading-[24px] text-[#00000099] mb-[60px] pb-[60px]">
               Agar siz Astrolab tiziz haqida ko’proq ma’lumotga ega bo’lishni
               istasangiz, arizani to’ldiring va 14 kunlik bepul foydalanishga
               bepul foydalanishga ega bo’ling
@@ -25,14 +25,14 @@ const RequestDemo = () => {
               href="tel:+998991234567"
             >
               <img src={Call} alt="call" />
-              <p>+998 99 123 45 67</p>
+              <p className="mulish text-[24px] font-semibold text-[#343A40]">+998 99 123 45 67</p>
             </a>
             <a
               className="flex items-center gap-[6px]"
               href="mailto:astrolab@gmail.com"
             >
               <img src={Sms} alt="call" />
-              <p>astrolab@gmail.com</p>
+              <p className="mulish text-[24px] font-semibold text-[#343A40]">astrolab@gmail.com</p>
             </a>
             </div>
             <div className="w-[556px] bg-[#fff] rounded-[12px] pt-[30px] px-[40px] pb-[40px]">

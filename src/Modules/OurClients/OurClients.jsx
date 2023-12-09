@@ -5,14 +5,19 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Intel from "../../assets/icons/intel.svg";
 import "./OurClients.scss"
+import Torrington from "../../assets/icons/torrington.svg" 
+import Salomor from "../../assets/icons/salomor.svg"
+import Connect from "../../assets/icons/connect.svg"
 const OurClients = () => {
   const data = [
     { id: 1, image: Intel },
-    { id: 2, image: Intel },
-    { id: 3, image: Intel },
-    { id: 4, image: Intel },
+    { id: 2, image: Torrington },
+    { id: 3, image: Salomor },
+    { id: 4, image: Connect },
     { id: 5, image: Intel },
-    { id: 6, image: Intel },
+    { id: 6, image: Torrington },
+    { id: 7, image: Salomor },
+    { id: 8 , image: Connect },
   ];
 
   return (
