@@ -17,7 +17,6 @@ import {
 } from "../../Modules";
 
 import { motion, useScroll } from "framer-motion";
-
 const Lending = () => {
   const { scrollYProgress } = useScroll();
   return (

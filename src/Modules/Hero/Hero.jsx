@@ -5,38 +5,166 @@ import Player from "../../assets/icons/player.svg";
 import HeroBg from "../../assets/images/hero-bg.png";
 import { motion } from "framer-motion";
 const Hero = () => {
+  let easeing = [0.6, -0.05, 0.01, 0.99];
+
+  const stagger = {
+    animate: {
+      transition: {
+        delayChildren: 0.4,
+        staggerChildren: 0.2,
+        staggerDirection: 1,
+      },
+    },
+  };
+
+  const fadeInUp = {
+    initial: {
+      y: -60,
+      opacity: 0,
+      transition: {
+        duration: 0.6,
+        ease: easeing,
+      },
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        delay: 0.5,
+        ease: easeing,
+      },
+    },
+  };
+
+  const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+
+  const firstName = {
+    initial: {
+      y: -20,
+    },
+    animate: {
+      y: 0,
+      transition: {
+        delayChildren: 0.4,
+        staggerChildren: 0.04,
+        staggerDirection: -1,
+      },
+    },
+  };
+
+  const lastName = {
+    initial: {
+      y: -20,
+    },
+    animate: {
+      y: 0,
+      transition: {
+        delayChildren: 0.4,
+        staggerChildren: 0.04,
+        staggerDirection: 1,
+      },
+    },
+  };
+
+  const letter = {
+    initial: {
+      y: 400,
+    },
+    animate: {
+      y: 0,
+      transition: { duration: 1, ...transition },
+    },
+  };
+
+  const btnGroup = {
+    initial: {
+      y: -60,
+      opacity: 0,
+      transition: { duration: 0.6, ease: easeing },
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      animation: {
+        duration: 0.6,
+        ease: easeing,
+      },
+    },
+  };
+  const star = {
+    initial: {
+      y: 60,
+      opacity: 0,
+      transition: { duration: 0.8, ease: easeing },
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      animation: {
+        duration: 0.6,
+        ease: easeing,
+      },
+    },
+  };
+
+  const header = {
+    initial: {
+      y: -60,
+      opacity: 0,
+      transition: { duration: 0.05, ease: easeing },
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      animation: {
+        duration: 0.6,
+        ease: easeing,
+      },
+    },
+  };
   return (
     <>
       <section className="hero-section">
         <div className="container">
-          <div className="flex items-center  relative">
-            <div className="pt-[120px]">
-              <h1 className="mulish text-[64px] font-medium text-white leading-normal w-full max-w-[646px] mb-[12px]">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, ease: easeing }}
+            className="flex items-center   relative"
+          >
+            <motion.div className="pt-[120px]">
+            <motion.div variants={firstName} initial="initial" animate="animate" className="first">
+            <motion.h1 variants={letter} className="mulish text-[64px] font-medium text-white leading-normal w-full max-w-[646px] mb-[12px]">
                 Xodimlarni boshqarishni avtomatlashtiring!!
-            
-              </h1>
-              <p className="mulish font-medium text-[24px] leading-normal text-white mb-[60px]">
+              </motion.h1>
+              <motion.p variants={letter} className="mulish font-medium text-[24px] leading-normal text-white mb-[60px]">
                 Astrolab tizimi - harakatlaringizni va vaqtingizni tejaydi.
-              </p>
-              <div className="flex items-center gap-[36px]">
-                <Link
+              </motion.p>
+            </motion.div>
+              <motion.div variants={firstName} className="flex items-center gap-[36px]">
+            <motion.div variants={letter}>
+            <Link
                   to="/admin"
                   className="mulish text-[20px] font-semibold py-[18px] px-[20px] rounded-[4px] text-black bg-white"
                 >
                   Demodan bepul foydalanish
                 </Link>
-                <button className="flex items-center mulish text-white text-[18px] font-semibold leading-normal ">
+            </motion.div>
+              <motion.div variants={firstName}>
+              <motion.button variants={letter} className="flex items-center mulish text-white text-[18px] font-semibold leading-normal ">
                   <img src={Player} alt="" />
                   Tizim qanday ishlaydi
-                </button>
-              </div>
-            </div>
+                </motion.button>
+              </motion.div>
+              </motion.div>
+            </motion.div>
             <img
               className="absolute right-[-50px] top-[100px]"
               src={HeroBg}
               alt="hero bg"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
