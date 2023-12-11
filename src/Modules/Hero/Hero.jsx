@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Player from "../../assets/icons/player.svg";
 import HeroBg from "../../assets/images/hero-bg.png";
 import { motion } from "framer-motion";
+import Dashboard from "../../assets/icons/dashboard.svg";
 const Hero = () => {
   let easeing = [0.6, -0.05, 0.01, 0.99];
 
@@ -125,43 +126,60 @@ const Hero = () => {
   };
   return (
     <>
-      <section className="hero-section">
+      <section className="hero-section grid place-items-center h-[90vh]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, ease: easeing }}
-            className="flex items-center   relative"
+            className="flex items-center    relative"
           >
-            <motion.div className="pt-[120px]">
-            <motion.div variants={firstName} initial="initial" animate="animate" className="first">
-            <motion.h1 variants={letter} className="mulish text-[64px] font-medium text-white leading-normal w-full max-w-[646px] mb-[12px]">
-                Xodimlarni boshqarishni avtomatlashtiring!!
-              </motion.h1>
-              <motion.p variants={letter} className="mulish font-medium text-[24px] leading-normal text-white mb-[60px]">
-                Astrolab tizimi - harakatlaringizni va vaqtingizni tejaydi.
-              </motion.p>
-            </motion.div>
-              <motion.div variants={firstName} className="flex items-center gap-[36px]">
-            <motion.div variants={letter}>
-            <Link
-                  to="/admin"
-                  className="mulish text-[20px] font-semibold py-[18px] px-[20px] rounded-[4px] text-black bg-white"
+            <motion.div >
+              <motion.div
+                variants={firstName}
+                initial="initial"
+                animate="animate"
+                className="first"
+              >
+                <motion.h1
+                  variants={letter}
+                  className="mulish text-[64px] font-medium text-white leading-tight w-full max-w-[646px] mb-[12px]"
                 >
-                  Demodan bepul foydalanish
-                </Link>
-            </motion.div>
-              <motion.div variants={firstName}>
-              <motion.button variants={letter} className="flex items-center mulish text-white text-[18px] font-semibold leading-normal ">
-                  <img src={Player} alt="" />
-                  Tizim qanday ishlaydi
-                </motion.button>
+                  Xodimlarni boshqarishni avtomatlashtiring!!
+                </motion.h1>
+                <motion.p
+                  variants={letter}
+                  className="mulish font-medium text-[24px] leading-normal text-white mb-[60px]"
+                >
+                  Astrolab tizimi - harakatlaringizni va vaqtingizni tejaydi.
+                </motion.p>
               </motion.div>
-              </motion.div>
+              <div
+                variants={firstName}
+                className="grid grid-cols-2 items-center w-full"
+              >
+                <motion.div variants={letter} className="bg-white  py-[12px] rounded-[4px] text-black text-center">
+                  <Link
+                    to="/admin"
+                    className="mulish text-[20px] font-semibold"
+                  >
+                    Demodan bepul foydalanish
+                  </Link>
+                </motion.div>
+                <motion.div variants={firstName}>
+                  <motion.button
+                    variants={letter}
+                    className="flex items-center mulish text-white text-[18px] font-semibold leading-normal "
+                  >
+                    <img src={Player} alt="" />
+                    Tizim qanday ishlaydi
+                  </motion.button>
+                </motion.div>
+              </div>
             </motion.div>
             <img
-              className="absolute right-[-50px] top-[100px]"
-              src={HeroBg}
+              className=""
+              src={Dashboard}
               alt="hero bg"
             />
           </motion.div>

@@ -51,7 +51,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex items-center gap-[12px] mb-[20px]">
+          <div className="flex items-center gap-[12px]">
           <a
               className="flex items-center gap-[6px]"
               href="tel:+998991234567"

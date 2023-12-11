@@ -13,7 +13,7 @@ const ManageMobileWorker = () => {
           </h2>
           <div className="flex items-start justify-between">
             <div>
-              <ul className="max-w-[626px] bg-white pt-[20px] pb-[38px] ps-[28px] rounded-[12px] mb-[40px]">
+              <ul className="max-w-[626px] h-[528px] flex items-center justify-between flex-col bg-white pt-[20px] pb-[38px] ps-[28px] rounded-[12px] mb-[40px]">
                 <li className="w-full flex items-center group duration-300 mb-[30px]">
                   <div className="w-[60px] flex items-center justify-center flex-col me-[38px]">
                     <div className="text-[#3A3A3A] duration-300 group-hover:text-[#000]">
@@ -135,7 +135,7 @@ const ManageMobileWorker = () => {
               className="rounded-[12px]"
               src={WorkersImg}
               width={504}
-              height={537}
+              height={528}
               alt=""
             />
           </div>

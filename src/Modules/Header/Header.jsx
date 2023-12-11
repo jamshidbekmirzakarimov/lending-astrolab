@@ -126,19 +126,22 @@ const Header = () => {
 
   return (
     <motion.div initial="initial" animate="animate">
-      <motion.header variants={stagger} className="py-[16px]">
+      <motion.header variants={stagger} className="py-[16px] h-[10vh] bg-white">
         <div className="container">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <motion.img
-              variants={header}
+                variants={header}
                 className="me-[40px]"
                 src={AstrolabLogo}
                 alt="astrolab logo"
                 width={137}
                 height={50}
               />
-              <motion.ul variants={stagger} className="flex items-center gap-[60px]">
+              <motion.ul
+                variants={stagger}
+                className="flex items-center gap-[60px]"
+              >
                 <motion.li variants={header}>
                   <a
                     className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
@@ -173,16 +176,25 @@ const Header = () => {
                 </motion.li>
               </motion.ul>
             </div>
-            <motion.div className="flex items-center gap-[12px]" variants={stagger}>
+            <motion.div
+              className="flex items-center gap-[12px]"
+              variants={stagger}
+            >
               <motion.div variants={header}>
-              <ChangeLang />
+                <ChangeLang />
               </motion.div>
               <Link to="/login">
-                <motion.button variants={header} className="px-[24px] border h-[40px] rounded-[8px] mulish font-semibold text-[18px] tracking-[0.9px] border-[#313131]">
+                <motion.button
+                  variants={header}
+                  className="px-[24px] border h-[40px] rounded-[8px] mulish font-semibold text-[18px] tracking-[0.9px] border-[#313131]"
+                >
                   Login
                 </motion.button>
               </Link>
-              <motion.button variants={header} className="mulish font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]">
+              <motion.button
+                variants={header}
+                className="mulish font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
+              >
                 Request a Demo
               </motion.button>
             </motion.div>

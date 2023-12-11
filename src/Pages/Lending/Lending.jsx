@@ -29,7 +29,7 @@ const Lending = () => {
           right: 0,
           left: 0,
           height: 10,
-          background: "red",
+          background: "#000",
           transformOrigin: "0%",
           zIndex: 999999
         }}

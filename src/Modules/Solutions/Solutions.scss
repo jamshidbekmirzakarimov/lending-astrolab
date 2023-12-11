@@ -88,7 +88,8 @@ summary:hover .summary-title {
 
 }
 
-details[open] .summary-content{
+details[open] .summary-content:nth-child(1){
   border-bottom: none;
   margin-bottom: -5px;
 }
+

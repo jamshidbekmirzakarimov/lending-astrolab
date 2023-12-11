@@ -21,9 +21,7 @@ const Solutions = () => {
             </h2>
             <div className="absolute">
               <details>
-                <summary
-                  className="mb-[-1px]"
-                >
+                <summary className="mb-[-1px]">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-[16px]">
                       <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
@@ -60,9 +58,7 @@ const Solutions = () => {
               </details>
 
               <details>
-                <summary
-                  className="mb-[-1px]"
-                >
+                <summary className="mb-[-1px]">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-[16px]">
                       <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
@@ -71,7 +67,7 @@ const Solutions = () => {
                         </p>
                       </div>
                       <span class="summary-title">
-                      Murakkab integratsiya jarayoni
+                        Murakkab integratsiya jarayoni
                       </span>
                     </div>
                     <div class="summary-chevron-up">
@@ -99,9 +95,7 @@ const Solutions = () => {
               </details>
 
               <details>
-                <summary
-                  className="mb-[-1px]"
-                >
+                <summary className="mb-[-1px]">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-[16px]">
                       <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
@@ -110,7 +104,7 @@ const Solutions = () => {
                         </p>
                       </div>
                       <span class="summary-title">
-                      Investitsiyalar qaytishining uzoq muddati
+                        Investitsiyalar qaytishining uzoq muddati
                       </span>
                     </div>
                     <div class="summary-chevron-up">
