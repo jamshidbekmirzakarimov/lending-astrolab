@@ -1,15 +1,18 @@
+import React from 'react'
+
 const ChangeLang = () => {
   return (
-    <div>
-            <select className="flag-select px-[24px] border h-[40px] rounded-[8px] border-[#313131]">
-                <option value="uz" className="flag-option">
-                  UZ
-                </option>
-                <option value="ru" className="flag-option">
-                  RU
-                </option>
-              </select>
-    </div>
+   <>
+    <select
+        id="small"
+        className="block w-[99px] p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      >
+        <option selected disabled>🌐</option>
+        <option value="uz">UZ</option>
+        <option value="ru">RU</option>
+        <option value="en">EN</option>
+      </select>
+      </>
   )
 }
 

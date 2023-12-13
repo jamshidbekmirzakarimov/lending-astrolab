@@ -126,7 +126,7 @@ const Hero = () => {
   };
   return (
     <>
-      <section className="hero-section grid place-items-center h-[90vh]">
+      <section className="hero-section grid place-items-center h-[100vh]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -134,7 +134,7 @@ const Hero = () => {
             transition={{ duration: 0.3, ease: easeing }}
             className="flex items-center    relative"
           >
-            <motion.div >
+            <motion.div>
               <motion.div
                 variants={firstName}
                 initial="initial"
@@ -158,7 +158,10 @@ const Hero = () => {
                 variants={firstName}
                 className="grid grid-cols-2 items-center w-full"
               >
-                <motion.div variants={letter} className="bg-white  py-[12px] rounded-[4px] text-black text-center">
+                <motion.div
+                  variants={letter}
+                  className="bg-white  py-[12px] rounded-[4px] text-black text-center"
+                >
                   <Link
                     to="/admin"
                     className="mulish text-[20px] font-semibold"
@@ -166,22 +169,17 @@ const Hero = () => {
                     Demodan bepul foydalanish
                   </Link>
                 </motion.div>
-                <motion.div variants={firstName}>
-                  <motion.button
-                    variants={letter}
-                    className="flex items-center mulish text-white text-[18px] font-semibold leading-normal "
-                  >
-                    <img src={Player} alt="" />
-                    Tizim qanday ishlaydi
-                  </motion.button>
-                </motion.div>
+
+                <button
+                  variants={letter}
+                  className="flex items-center mulish text-white text-[18px] font-semibold leading-normal "
+                >
+                  <img src={Player} alt="" />
+                  Tizim qanday ishlaydi
+                </button>
               </div>
             </motion.div>
-            <img
-              className=""
-              src={Dashboard}
-              alt="hero bg"
-            />
+            <img className="" src={Dashboard} alt="hero bg" />
           </motion.div>
         </div>
       </section>
