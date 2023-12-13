@@ -126,7 +126,7 @@ const Header = () => {
 
   return (
     <motion.div initial="initial" animate="animate">
-      <motion.header variants={stagger} className="py-[16px] h-[10vh] bg-white">
+      <motion.header variants={stagger} className="py-[16px] h-[10vh] bg-white flex items-center justify-center">
         <div className="container">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
