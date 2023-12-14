@@ -3,14 +3,16 @@
   top: 0;
   transform: translateY(-120%);
   width: 100%;
-  height: 100%;
+
   background-color: #fff;
   transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  z-index: 999999990999;
+  z-index: 999999990999999;
+  display: none;
 }
 
 .menu.active {
   transform: translateY(0%);
   transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
 }
  

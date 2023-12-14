@@ -4,13 +4,11 @@ import Solution from "../../assets/images/solution-img.jpg";
 import { useState } from "react";
 const Solutions = () => {
   return (
-    <section className=" pt-[146px] pb-[115px] bg-[#F4F4FF]">
+    <section className=" pt-[146px] pb-[115px] bg-[#F4F4FF] max-[1090px]:bg-transparent">
       <div className="container">
-        <div className="flex  justify-between bg-white rounded-[20px] min-h-[539px] relative">
+        <div className="flex  justify-between max-[1090px]:justify-center bg-white rounded-[20px] min-h-[539px] relative max-[1090px]:flex-col-reverse">
           <img
-            className="rounded-[20px]"
-            width={504}
-            height={539}
+            className="rounded-[20px] w-[504px] h-[539px] max-[1090px]:w-full "
             src={Solution}
             alt=""
           />
@@ -25,7 +23,7 @@ const Solutions = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-[16px]">
                       <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
-                        <p className="one-line-title font-semibold text-[12px] text-black ">
+                        <p className="one-line-title font-semibold text-[12px] text-black">
                           1
                         </p>
                       </div>

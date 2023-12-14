@@ -6,3 +6,25 @@
     background-blend-mode: color;
     background-color: rgba(0, 0, 0, 0.60);
 }
+
+
+@media only screen and (max-width: 1090px) {
+    .hero-section{
+        padding-top: 120px;
+        width: 100%;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-blend-mode: color;
+        background-color: #f4f4f4;
+    }
+  }
+
+  .hero-start{
+    width: 100%;
+    background-image: url(../../assets/images/hero-background-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.60);
+  }

@@ -236,7 +236,7 @@ const Header = () => {
 
       <div
         onClick={handleOverlayClick}
-        className={`menu hidden max-[1090px]:block relative h-full ${
+        className={`menu hidden max-[1090px]:block h-[100vh]   ${
           isOpen ? "active" : ""
         }`}
       >

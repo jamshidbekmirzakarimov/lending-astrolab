@@ -5,6 +5,7 @@ import Player from "../../assets/icons/player.svg";
 import HeroBg from "../../assets/images/hero-bg.png";
 import { motion } from "framer-motion";
 import Dashboard from "../../assets/icons/dashboard.svg";
+import mediaDashboard from "../../assets/icons/media-dashboard.svg"
 const Hero = () => {
   let easeing = [0.6, -0.05, 0.01, 0.99];
 
@@ -126,20 +127,20 @@ const Hero = () => {
   };
   return (
     <>
-      <section className="hero-section grid place-items-center h-[100vh]">
+      <section className="hero-section grid place-items-center max-[1090px]:place-items-start h-[100vh]">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, ease: easeing }}
-            className="flex items-center flex-col-reverse pt-[100px]"
+            className="flex items-center justify-center max-[1090px]:flex-col-reverse w-full"
           >
-            <motion.div>
+            <motion.div className="max-[1090px]:hidden">
               <motion.div
                 variants={firstName}
                 initial="initial"
                 animate="animate"
-                className="first"
+                className="first "
               >
                 <motion.h1
                   variants={letter}
@@ -179,9 +180,61 @@ const Hero = () => {
                 </button>
               </div>
             </motion.div>
-            <img className="" src={Dashboard} alt="hero bg" />
+            <img
+              className="w-full max-[1090px]:mb-[20px] max-[600px]:w-[400px] "
+              alt="image alt text"
+              src={Dashboard}
+              srcset={mediaDashboard}
+              sizes="(max-width: 450px)"
+            />
+         
           </motion.div>
         </div>
+
+        <motion.div className="hero-start pt-[60px] pb-[65px] hidden max-[1090px]:block">
+          <div className="container">
+            <motion.div
+              variants={firstName}
+              initial="initial"
+              animate="animate"
+              className="first "
+            >
+              <motion.h1
+                variants={letter}
+                className="mulish text-[64px] max-[600px]:text-[40px] max-[450px]:text-[30px] max-[375px]:text-[24px] font-medium text-white leading-tight w-full max-w-[646px] mb-[12px]"
+              >
+                Xodimlarni boshqarishni avtomatlashtiring!!
+              </motion.h1>
+              <motion.p
+                variants={letter}
+                className="mulish font-medium text-[24px] max-[450px]:text-[20px] max-[375px]:text-[16px] leading-normal text-white mb-[60px]"
+              >
+                Astrolab tizimi - harakatlaringizni va vaqtingizni tejaydi.
+              </motion.p>
+            </motion.div>
+            <div
+              variants={firstName}
+              className="grid grid-cols-2 max-[600px]:grid-cols-1 items-center w-full"
+            >
+              <motion.div
+                variants={letter}
+                className="bg-white max-[600px]:order-2  py-[12px] rounded-[4px] text-black text-center"
+              >
+                <Link to="/admin" className="mulish text-[20px] font-semibold">
+                  Demodan bepul foydalanish
+                </Link>
+              </motion.div>
+
+              <button
+                variants={letter}
+                className="flex items-center mulish text-white text-[18px] font-semibold leading-normal "
+              >
+                <img src={Player} alt="" />
+                Tizim qanday ishlaydi
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </section>
     </>
   );
