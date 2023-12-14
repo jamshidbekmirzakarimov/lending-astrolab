@@ -4,6 +4,11 @@ import AstrolabLogo from "../../assets/icons/astrolab-logo.svg";
 import ChangeLang from "../../components/ChangeLang/ChangeLang";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Burger from "../../assets/icons/burger.svg";
+import { useState } from "react";
+import "./Header.scss";
+import WhiteLogo from "../../assets/icons/white-logo.svg";
+import CloseBurger from "../../assets/icons/close-burger.svg";
 const Header = () => {
   let easeing = [0.6, -0.05, 0.01, 0.99];
 
@@ -124,11 +129,27 @@ const Header = () => {
     },
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenMenu = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+  };
+
+  const handleOverlayClick = () => {
+    if (isOpen) {
+      handleCloseMenu();
+    }
+  };
+
   return (
     <motion.div initial="initial" animate="animate">
       <motion.header
         variants={stagger}
-        className="py-[16px] h-[10vh] bg-white flex items-center justify-center fixed w-full z-[99999999999999]"
+        className="py-[16px] bg-[#fff] flex items-center justify-center fixed w-full z-[9999999999]"
       >
         <div className="container">
           <div className="flex items-center justify-between">
@@ -143,7 +164,7 @@ const Header = () => {
               />
               <motion.ul
                 variants={stagger}
-                className="flex items-center gap-[60px]"
+                className="flex items-center max-[1090px]:hidden gap-[60px]"
               >
                 <motion.li variants={header}>
                   <a
@@ -186,24 +207,97 @@ const Header = () => {
               <motion.div variants={header}>
                 <ChangeLang />
               </motion.div>
-              <Link to="/login">
+              <div className="max-[670px]:hidden">
+                <Link to="/login">
+                  <motion.button
+                    variants={header}
+                    className="px-[24px] border h-[40px] rounded-[8px] mulish font-semibold text-[18px] tracking-[0.9px] border-[#313131] me-[12px]"
+                  >
+                    Login
+                  </motion.button>
+                </Link>
                 <motion.button
                   variants={header}
-                  className="px-[24px] border h-[40px] rounded-[8px] mulish font-semibold text-[18px] tracking-[0.9px] border-[#313131]"
+                  className="mulish font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
                 >
-                  Login
+                  Request a Demo
                 </motion.button>
-              </Link>
-              <motion.button
-                variants={header}
-                className="mulish font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
+              </div>
+              <button
+                className="bg-black p-[8px] rounded-[50%] hidden max-[1090px]:block"
+                onClick={handleOpenMenu}
               >
-                Request a Demo
-              </motion.button>
+                <img src={Burger} alt="" />
+              </button>
             </motion.div>
           </div>
         </div>
       </motion.header>
+
+      <div
+        onClick={handleOverlayClick}
+        className={`menu hidden max-[1090px]:block relative h-full ${
+          isOpen ? "active" : ""
+        }`}
+      >
+        <div className=" bg-black">
+          <div className="container">
+            <div className="flex items-center justify-between py-[10px]">
+              <img src={WhiteLogo} alt="" />
+              <button className="text-white" onClick={handleCloseMenu}>
+                <img src={CloseBurger} alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <motion.ul
+            variants={stagger}
+            className="flex  flex-col  gap-[10px] pt-[20px]"
+          >
+            <motion.li variants={header}>
+              <a
+                className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
+                href="#"
+              >
+                About us
+              </a>
+            </motion.li>
+            <motion.li variants={header}>
+              <a
+                className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
+                href="#"
+              >
+                Benefits
+              </a>
+            </motion.li>
+            <motion.li variants={header}>
+              <a
+                className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
+                href="#"
+              >
+                Products
+              </a>
+            </motion.li>
+            <motion.li variants={header}>
+              <a
+                className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
+                href="#"
+              >
+                Reviews
+              </a>
+            </motion.li>
+          </motion.ul>
+          <div className="flex items-center justify-center pt-[100px]">
+            <motion.button
+              variants={header}
+              className="mulish flex items-center justify-center font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
+            >
+              Request a Demo
+            </motion.button>
+          </div>
+        </div>
+      </div>
     </motion.div>
   );
 };

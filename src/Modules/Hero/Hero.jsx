@@ -132,7 +132,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, ease: easeing }}
-            className="flex items-center    relative"
+            className="flex items-center flex-col-reverse pt-[100px]"
           >
             <motion.div>
               <motion.div
