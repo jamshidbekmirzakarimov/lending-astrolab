@@ -4,23 +4,23 @@ import Solution from "../../assets/images/solution-img.jpg";
 import { useState } from "react";
 const Solutions = () => {
   return (
-    <section className=" pt-[146px] pb-[115px] bg-[#F4F4FF] max-[1090px]:bg-transparent">
+    <section className=" pt-[146px] max-[700px]:pt-[50px] max-[665px]:pt-[100px] max-[600px]:pt-[150px] max-[491px]:pt-[190px] max-[450px]:pt-[100px] max-[420px]:pt-[80px] max-[390px]:pt-[60px] max-[375px]:pt-[20px] pb-[115px] max-[700px]:pb-[0px]  bg-[#F4F4FF] max-[1090px]:bg-transparent">
       <div className="container">
         <div className="flex  justify-between max-[1090px]:justify-center bg-white rounded-[20px] min-h-[539px] relative max-[1090px]:flex-col-reverse">
           <img
-            className="rounded-[20px] w-[504px] h-[539px] max-[1090px]:w-full "
+            className="rounded-[20px] w-[504px] h-[539px] max-[540px]:h-[400px] max-[400px]:h-[350px] max-[1090px]:w-full max-[600px]:mt-[30px]"
             src={Solution}
             alt=""
           />
           <div>
-            <h2 className="mulish font-semibold text-[28px] max-w-[596px] leading-[33px] mb-[40px] pt-[60px]">
+            <h2 className="mulish font-semibold text-[28px] max-w-[596px] leading-[33px] mb-[40px] pt-[60px] max-[600px]:pt-[20px]">
               Xodimlar faoliyatini boshqarishni avtomatlashtirish uchun biznesga
               nima xalaqit beradi?
             </h2>
-            <div className="absolute">
+            <div className="static max-[700px]:mb-[30px] max-[600px]:mb-[0]">
               <details>
                 <summary className="mb-[-1px]">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between overflow-hidden">
                     <div className="flex items-center gap-[16px]">
                       <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
                         <p className="one-line-title font-semibold text-[12px] text-black">

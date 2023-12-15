@@ -42,7 +42,7 @@ const Benefits = () => {
             Xodimlarni boshqarishni manfaatli shartlarda avtomatlashtiring.
           </p>
 
-          <ul className="w-full justify-between flex items-center flex-wrap gap-[30px]">
+          <ul className="w-full justify-between max-[700px]:justify-center flex items-center flex-wrap gap-[30px]">
             {benefitsData.map((benefit, index) => (
               <InfoCard
                 key={index}

@@ -38,8 +38,8 @@ const Lending = () => {
       <main>
         <Hero />
         <Solutions />
-        {/* <Benefits />
-        <ManageMobileWorker />
+        <Benefits />
+        {/* <ManageMobileWorker />
         <Business />
         <Automation />
         <AstroProduct />

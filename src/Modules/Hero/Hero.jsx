@@ -181,7 +181,7 @@ const Hero = () => {
               </div>
             </motion.div>
             <img
-              className="w-full max-[1090px]:mb-[20px] max-[600px]:w-[400px] "
+              className="w-full max-[1090px]:mb-[20px] max-[700px]:w-[400px] "
               alt="image alt text"
               src={Dashboard}
               srcset={mediaDashboard}
@@ -201,7 +201,7 @@ const Hero = () => {
             >
               <motion.h1
                 variants={letter}
-                className="mulish text-[64px] max-[600px]:text-[40px] max-[450px]:text-[30px] max-[375px]:text-[24px] font-medium text-white leading-tight w-full max-w-[646px] mb-[12px]"
+                className="mulish text-[64px] max-[700px]:text-[40px] max-[450px]:text-[30px] max-[375px]:text-[24px] font-medium text-white leading-tight w-full max-w-[646px] mb-[12px]"
               >
                 Xodimlarni boshqarishni avtomatlashtiring!!
               </motion.h1>

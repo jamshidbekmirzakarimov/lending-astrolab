@@ -1,5 +1,6 @@
 details {
-  width: 554px;
+  width: 100%;
+  max-width: 554px;
   /* margin-left: auto; */
   /* display: flex;
     align-items: center; */
@@ -93,3 +94,14 @@ details[open] .summary-content:nth-child(1){
   margin-bottom: -5px;
 }
 
+@media only screen and (max-width: 700px) {
+  details {
+    width: 100%;
+    max-width: 100%;
+    /* margin-left: auto; */
+    /* display: flex;
+      align-items: center; */
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
