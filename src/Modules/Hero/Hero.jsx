@@ -127,7 +127,7 @@ const Hero = () => {
   };
   return (
     <>
-      <section className="hero-section grid place-items-center max-[1090px]:place-items-start h-[100vh]">
+      <section className="hero-section grid place-items-center max-[1090px]:place-items-start h-[100vh] max-[1090px]:h-full ">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -181,7 +181,7 @@ const Hero = () => {
               </div>
             </motion.div>
             <img
-              className="w-full max-[1090px]:mb-[20px] max-[700px]:w-[400px] "
+              className="w-full max-[1090px]:mb-[20px] max-[700px]:w-[400px] max-[1090px]:w-[500px]"
               alt="image alt text"
               src={Dashboard}
               srcset={mediaDashboard}
