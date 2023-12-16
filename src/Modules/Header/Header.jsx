@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AstrolabLogo from "../../assets/icons/astrolab-logo.svg";
 
 import ChangeLang from "../../components/ChangeLang/ChangeLang";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Burger from "../../assets/icons/burger.svg";
-import { useState } from "react";
 import "./Header.scss";
 import WhiteLogo from "../../assets/icons/white-logo.svg";
 import CloseBurger from "../../assets/icons/close-burger.svg";
 const Header = () => {
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      setHasScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   let easeing = [0.6, -0.05, 0.01, 0.99];
 
   const stagger = {
@@ -149,7 +164,9 @@ const Header = () => {
     <motion.div initial="initial" animate="animate">
       <motion.header
         variants={stagger}
-        className="py-[16px] bg-[#fff] flex items-center justify-center fixed w-full z-[9999999999]"
+        className={`py-[16px] bg-[#fff] flex items-center justify-center fixed w-full z-[9999999999] ${
+          hasScrolled ? "Headershadow" : ""
+        }`}
       >
         <div className="container">
           <div className="flex items-center justify-between">
@@ -216,12 +233,14 @@ const Header = () => {
                     Login
                   </motion.button>
                 </Link>
-                <motion.button
+              <a href="#requesdemo">
+              <motion.button
                   variants={header}
                   className="mulish font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
                 >
                   Request a Demo
                 </motion.button>
+              </a>
               </div>
               <button
                 className="bg-black p-[8px] rounded-[50%] hidden max-[1090px]:block"

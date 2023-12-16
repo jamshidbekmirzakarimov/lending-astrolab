@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Hero.scss";
 import { Link } from "react-router-dom";
 import Player from "../../assets/icons/player.svg";
 import HeroBg from "../../assets/images/hero-bg.png";
 import { motion } from "framer-motion";
 import Dashboard from "../../assets/icons/dashboard.svg";
-import mediaDashboard from "../../assets/icons/media-dashboard.svg"
+import mediaDashboard from "../../assets/icons/media-dashboard.svg";
+import Modal from "../../components/Modal/Modal";
+import AstroVideo from "../../assets/Videos/AstroVideo.mp4";
+import ReactPlayer from "react-player/file";
 const Hero = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+  const handleOverlayClick = () => {
+    closeModal();
+  };
   let easeing = [0.6, -0.05, 0.01, 0.99];
 
   const stagger = {
@@ -174,6 +189,7 @@ const Hero = () => {
                 <button
                   variants={letter}
                   className="flex items-center mulish text-white text-[18px] font-semibold leading-normal "
+                  onClick={openModal}
                 >
                   <img src={Player} alt="" />
                   Tizim qanday ishlaydi
@@ -187,7 +203,6 @@ const Hero = () => {
               srcset={mediaDashboard}
               sizes="(max-width: 450px)"
             />
-         
           </motion.div>
         </div>
 
@@ -236,6 +251,26 @@ const Hero = () => {
           </div>
         </motion.div>
       </section>
+
+      <div>
+      
+
+        {modalOpen && (
+        <div className="overlay" onClick={handleOverlayClick}>
+          <Modal isOpen={modalOpen} onClose={closeModal}>
+          <div className="flex items-center justify-center">
+            <ReactPlayer
+              width="70%"
+              height="70%"
+              url={AstroVideo}
+              controls={true}
+              playing={true}
+            />
+          </div>
+          </Modal>
+        </div>
+      )}
+      </div>
     </>
   );
 };

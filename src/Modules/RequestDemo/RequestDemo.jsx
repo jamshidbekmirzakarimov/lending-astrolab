@@ -5,7 +5,7 @@ import LenfingInput from "../../UI/LenfingInput/LenfingInput";
 const RequestDemo = () => {
   return (
     <>
-      <section className="py-[20px] bg-[#F4F4FF]">
+      <section id="requesdemo" className="py-[20px] bg-[#F4F4FF]">
         <div className="container">
           <div className="flex items-center justify-between">
             <div>

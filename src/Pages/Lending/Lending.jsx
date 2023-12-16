@@ -49,7 +49,7 @@ const Lending = () => {
         <RequestDemo />
         <Social />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
