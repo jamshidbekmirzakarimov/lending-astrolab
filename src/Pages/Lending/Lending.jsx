@@ -39,7 +39,7 @@ const Lending = () => {
         <Hero />
         <Solutions />
         <Benefits />
-        {/* <ManageMobileWorker />
+        <ManageMobileWorker />
         <Business />
         <Automation />
         <AstroProduct />
@@ -47,7 +47,7 @@ const Lending = () => {
         <OurClients />
         <Customers />
         <RequestDemo />
-        <Social /> */}
+        <Social />
       </main>
       {/* <Footer /> */}
     </>

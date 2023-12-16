@@ -11,11 +11,11 @@ const ManageMobileWorker = () => {
           <h2 className="w-full max-w-[726px] mulish text-[32px] text-black font-semibold leading-[38px] mb-[49px]">
             Xodimlarni mobil telefondan boshqarish uchun eng zamonaviy tizim.
           </h2>
-          <div className="flex items-start gap-[60px]">
+          <div className="flex items-start max-[970px]:flex-col-reverse max-[970px]:items-center max-[970px]:justify-center gap-[60px]">
             <div>
-              <ul className="max-w-[626px] h-[528px] flex items-center justify-between flex-col bg-white pt-[20px] pb-[38px] ps-[28px] rounded-[12px] mb-[40px]">
-                <li className="w-full flex items-center group duration-300 mb-[30px]">
-                  <div className="w-[60px] flex items-center justify-center flex-col me-[38px]">
+              <ul className="max-w-[626px] h-[528px] flex items-center justify-between flex-col bg-white max-[600px]:bg-transparent pt-[20px] pb-[38px] ps-[28px] rounded-[12px] mb-[40px]">
+                <li className="w-full flex items-center max-[600px]:flex-col max-[600px]:items-start max-[600px]:border-b-[1px] max-[600px]:border-[#D5D5D8] max-[600px]:pb-[12px]   group duration-300 mb-[30px]">
+                  <div className="w-[60px] flex items-center justify-center flex-col max-[600px]:flex-row me-[38px] max-[600px]:justify-start">
                     <div className="text-[#3A3A3A] duration-300 group-hover:text-[#000]">
                       <svg
                         width="61"
@@ -39,7 +39,7 @@ const ManageMobileWorker = () => {
                     ketishlarning kamayishi.
                   </p>
                 </li>
-                <li className="w-full flex items-center group duration-300 mb-[30px]">
+                <li className="w-full flex items-center  group duration-300 mb-[30px]">
                   <div className="w-[60px] flex items-center flex-col justify-center me-[38px]">
                     <div className=" text-[#3A3A3A] duration-300 group-hover:text-[#000]">
                       <svg
@@ -57,7 +57,7 @@ const ManageMobileWorker = () => {
                       </svg>
                     </div>
                     <h3 className="mulish text-[16px] duration-300 font-semibold text-[#3A3A3A] border-b-[2px] border-transparent group-hover:border-b-[2px] group-hover:border-[#000] group-hover:text-[#000]">
-                    Mobillik
+                      Mobillik
                     </h3>
                   </div>
                   <p className="mulish w-full max-w-[341px] text-[#3A3A3A] text-[20px] font-normal leading-[24px] tracking-[0.5px] duration-300 group-hover:text-[#000] ">
@@ -119,7 +119,7 @@ const ManageMobileWorker = () => {
                       </svg>
                     </div>
                     <h3 className="mulish text-[16px] duration-300 font-semibold text-[#3A3A3A] border-b-[2px] border-transparent group-hover:border-b-[2px] group-hover:border-[#000] group-hover:text-[#000]">
-                    Samaradorlik
+                      Samaradorlik
                     </h3>
                   </div>
                   <p className="mulish w-full max-w-[341px] text-[#3A3A3A] text-[20px] font-normal leading-[24px] tracking-[0.5px] duration-300 group-hover:text-[#000] ">
