@@ -17,17 +17,20 @@ const Benefits = () => {
     {
       icon: Good,
       title: "Bepul foydalanish imkoniyati",
-      description: "Siz 14 kunga Workly tizimining to‘liq funktsionalidan bepul foydalanish imkoniyatini olasiz.",
+      description:
+        "Siz 14 kunga Workly tizimining to‘liq funktsionalidan bepul foydalanish imkoniyatini olasiz.",
     },
     {
       icon: UiwLoading,
       title: "Tez ishga tushirish",
-      description: "Mijozlarimizning tajribasiga ko‘ra Astrolab tizimining asosiy mahsulotlarini joriy etishga 1-2 kun talab qilinadi.",
+      description:
+        "Mijozlarimizning tajribasiga ko‘ra Astrolab tizimining asosiy mahsulotlarini joriy etishga 1-2 kun talab qilinadi.",
     },
     {
       icon: Location,
       title: "Hohlagan jozingizda",
-      description: "Siz bizning tizimimizdan hohlagan manzillingizda foydalanishingiz mumkin.",
+      description:
+        "Siz bizning tizimimizdan hohlagan manzillingizda foydalanishingiz mumkin.",
     },
   ];
 
@@ -35,10 +38,10 @@ const Benefits = () => {
     <>
       <section className="pt-[62px] pb-[60px]">
         <div className="container">
-          <h2 className="mulish font-bold text-[40px] text-black leading-[20px] tracking-[0.5px] mb-[18px]">
+          <h2 className="mulish font-bold text-[40px] text-black leading-[20px] tracking-[0.5px] mb-[18px] max-[600px]:text-[30px] max-[400px]:text-[24px]">
             Astrolab afzalliklari
           </h2>
-          <p className="mulish text-[32px] font-semibold leading-normal text-black w-full max-w-[711px] mb-[40px]">
+          <p className="mulish text-[32px] max-[600px]:text-[28px] max-[400px]:text-[20px]  font-semibold leading-normal text-black w-full max-w-[711px] mb-[40px] max-[400px]:mb-[20px]">
             Xodimlarni boshqarishni manfaatli shartlarda avtomatlashtiring.
           </p>
 
