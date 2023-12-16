@@ -4,7 +4,7 @@ import Solution from "../../assets/images/solution-img.jpg";
 import { useState } from "react";
 const Solutions = () => {
   return (
-    <section className=" pt-[146px] max-[700px]:pt-[50px] max-[665px]:pt-[100px] max-[600px]:pt-[150px] max-[491px]:pt-[190px] max-[450px]:pt-[100px] max-[420px]:pt-[80px] max-[390px]:pt-[60px] max-[375px]:pt-[20px] pb-[115px] max-[700px]:pb-[0px]  bg-[#F4F4FF] max-[1090px]:bg-transparent">
+    <section className=" pt-[146px] max-[700px]:pt-[50px] max-[665px]:pt-[100px] max-[600px]:pt-[150px] max-[491px]:pt-[190px] max-[450px]:pt-[100px] max-[420px]:pt-[80px] max-[390px]:pt-[60px] max-[375px]:pt-[20px] pb-[115px] max-[700px]:pb-[0px]  bg-[#F4F4FF] max-[1090px]:bg-transparent max-[378px]:pt-[100px]">
       <div className="container">
         <div className="flex  justify-between max-[1090px]:justify-center bg-white rounded-[20px] min-h-[539px] relative max-[1090px]:flex-col-reverse">
           <img
