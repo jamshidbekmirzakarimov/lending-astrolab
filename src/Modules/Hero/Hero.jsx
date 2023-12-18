@@ -196,13 +196,16 @@ const Hero = () => {
                 </button>
               </div>
             </motion.div>
-            <img
-              className="w-full max-[1090px]:mb-[20px] max-[700px]:w-[400px] max-[1090px]:w-[500px]"
-              alt="image alt text"
-              src={Dashboard}
-              srcset={mediaDashboard}
-              sizes="(max-width: 450px)"
-            />
+            <motion.div>
+              <motion.img
+                className="w-full max-[1090px]:mb-[20px] max-[700px]:w-[400px] max-[1090px]:w-[500px]"
+                initial={{x:200, opacity:0}} animate={{x:0, opacity: 1}} transition={{duration:.5, delay:0.8}}
+                alt="image alt text"
+                src={Dashboard}
+                srcset={mediaDashboard}
+                sizes="(max-width: 450px)"
+              />
+            </motion.div>
           </motion.div>
         </div>
 
@@ -227,12 +230,14 @@ const Hero = () => {
                 Astrolab tizimi - harakatlaringizni va vaqtingizni tejaydi.
               </motion.p>
             </motion.div>
-            <div
-              variants={firstName}
+            <motion.div
+              variants={stagger}
               className="grid grid-cols-2 max-[600px]:grid-cols-1 items-center w-full"
             >
               <motion.div
-                variants={letter}
+                variants={btnGroup}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="bg-white max-[600px]:order-2  py-[12px] rounded-[4px] text-black text-center"
               >
                 <Link to="/admin" className="mulish text-[20px] font-semibold">
@@ -240,36 +245,36 @@ const Hero = () => {
                 </Link>
               </motion.div>
 
-              <button
-                variants={letter}
+              <motion.button
+                variants={btnGroup}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="flex items-center mulish text-white text-[18px] font-semibold leading-normal "
               >
                 <img src={Player} alt="" />
                 Tizim qanday ishlaydi
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           </div>
         </motion.div>
       </section>
 
       <div>
-      
-
         {modalOpen && (
-        <div className="overlay" onClick={handleOverlayClick}>
-          <Modal isOpen={modalOpen} onClose={closeModal}>
-          <div className="flex items-center justify-center">
-            <ReactPlayer
-              width="70%"
-              height="70%"
-              url={AstroVideo}
-              controls={true}
-              playing={true}
-            />
+          <div className="overlay" onClick={handleOverlayClick}>
+            <Modal isOpen={modalOpen} onClose={closeModal}>
+              <div className="flex items-center justify-center">
+                <ReactPlayer
+                  width="70%"
+                  height="70%"
+                  url={AstroVideo}
+                  controls={true}
+                  playing={true}
+                />
+              </div>
+            </Modal>
           </div>
-          </Modal>
-        </div>
-      )}
+        )}
       </div>
     </>
   );

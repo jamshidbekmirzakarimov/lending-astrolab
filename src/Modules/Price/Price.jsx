@@ -146,7 +146,9 @@ const Price = () => {
                     </li>
                   ))}
                 </ul>
-                <ListButton>Sinab ko'rish</ListButton>
+                <a href="#requesdemo">
+                  <ListButton>Sinab ko'rish</ListButton>
+                </a>
               </div>
 
               <div className="flex items-center justify-center flex-col ">
@@ -184,7 +186,9 @@ const Price = () => {
                     </li>
                   ))}
                 </ul>
-                <ListButton>Sinab ko'rish</ListButton>
+                <a href="#requesdemo">
+                  <ListButton>Sinab ko'rish</ListButton>
+                </a>
               </div>
 
               <div className="flex items-center justify-center flex-col ">
@@ -222,7 +226,9 @@ const Price = () => {
                     </li>
                   ))}
                 </ul>
-                <ListButton>Sinab ko'rish</ListButton>
+                <a href="#requesdemo">
+                  <ListButton>Sinab ko'rish</ListButton>
+                </a>
               </div>
             </div>
           </div>

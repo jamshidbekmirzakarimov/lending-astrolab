@@ -164,7 +164,7 @@ const Header = () => {
     <motion.div initial="initial" animate="animate">
       <motion.header
         variants={stagger}
-        className={`py-[16px] bg-[#fff] flex items-center justify-center fixed w-full z-[9999999999] ${
+        className={`py-[16px] bg-[#fff] flex items-center justify-center fixed w-full z-[9999] ${
           hasScrolled ? "Headershadow" : ""
         }`}
       >
