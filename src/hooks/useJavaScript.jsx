@@ -24,22 +24,22 @@ function useJavaScript() {
       }
     }
     const navbarlinksActive = () => {
-      let navbarlinks = select(".nav-title", true);
-      let position = window.scrollY + 200;
-      navbarlinks.forEach((navbarlink) => {
-        if (!navbarlink.hash) return;
-        let section = select(navbarlink?.hash);
-        if (!section) return;
-        if (
-          position >= section?.offsetTop &&
-          position <= section?.offsetTop + section.offsetHeight
-        ) {
-          navbarlink.classList.add("nav-title-active");
-        } else {
-          navbarlink.classList.remove("nav-title-active");
-        }
-      });
-    };
+        let navbarlinks = select(".nav-title", true);
+        let position = window.scrollY + 200;
+        navbarlinks.forEach((navbarlink) => {
+            if (!navbarlink.hash) return;
+            let section = select(navbarlink?.hash);
+            if (!section) return;
+            if (
+                position >= section?.offsetTop &&
+                position <= section?.offsetTop + section.offsetHeight
+                ) {
+                    navbarlink.classList.add("nav-title-active");
+                } else {
+                    navbarlink.classList.remove("nav-title-active");
+                }
+            });
+        };
   
     return { select, scrollto, onActive, navbarlinksActive };
   }

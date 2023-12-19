@@ -12,7 +12,7 @@ import { useLocalization } from "../../hooks/useLocalization";
 import useScroll from "../../hooks/useScroll";
 import useJavaScript from "../../hooks/useJavaScript";
 const Header = () => {
-  const { onActive } = useJavaScript();
+  const { onActive, navbarlinksActive } = useJavaScript();
   const [scrollNumber] = useScroll();
   const [hasScrolled, setHasScrolled] = useState(false);
   const [lang, setLang] = useLocalization();
@@ -36,6 +36,9 @@ const Header = () => {
 
   console.log(scrollNumber, "bu scroll ekan");
 
+  useEffect(() => {
+    navbarlinksActive()
+  })
   let easeing = [0.6, -0.05, 0.01, 0.99];
 
   const stagger = {
@@ -183,7 +186,7 @@ const Header = () => {
         <div className="container">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <a href="#">
+              <p onClick={(e) => onActive(e, "#header")}>
                 <motion.img
                   variants={header}
                   className="me-[40px]"
@@ -192,7 +195,7 @@ const Header = () => {
                   width={137}
                   height={50}
                 />
-              </a>
+              </p>
               <motion.ul
                 variants={stagger}
                 className="flex items-center max-[1090px]:hidden gap-[60px]"
