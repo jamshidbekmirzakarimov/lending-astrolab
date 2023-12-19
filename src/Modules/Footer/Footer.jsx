@@ -68,7 +68,7 @@ const Footer = () => {
             </a>
             <a
               className="flex items-center gap-[6px]"
-              href="mailto:astrolab@gmail.com"
+              href="https://t.me/jamshidbek_mirzakarimov"
             >
               <img src={TelegramChat} alt="call" />
               <p> Telegram Chat</p>

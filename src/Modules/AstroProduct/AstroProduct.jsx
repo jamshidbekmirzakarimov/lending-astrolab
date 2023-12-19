@@ -34,7 +34,7 @@ const AstroProduct = () => {
   ];
   return (
     <>
-      <section className="pt-[60px] pb-[60px] bg-white">
+      <section id="AstroProduct" className="pt-[60px] pb-[60px] bg-white">
         <div className="container">
           <h2 className="mb-[60px] mulish font-bold text-[40px] text-[#000] leading-normal">
             Astrolab mahsulotlari
@@ -45,7 +45,7 @@ const AstroProduct = () => {
                 className={"bg-[black]"}
                 key={index}
                 icon={benefit.icon}
-                title={benefit.title}
+                title=  {benefit.title}
                 description={benefit.description}
                 DescCClassName={"text-[#000] max-w-[412px]"}
                 ImgClassName={"w-[60px] h-[60px]"}

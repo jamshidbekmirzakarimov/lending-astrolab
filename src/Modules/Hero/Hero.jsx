@@ -148,7 +148,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, ease: easeing }}
-            className="flex items-center justify-center max-[1090px]:flex-col-reverse w-full"
+            className="flex items-center justify-between max-[1090px]:justify-center max-[1090px]:flex-col-reverse w-full"
           >
             <motion.div className="max-[1090px]:hidden">
               <motion.div
@@ -199,7 +199,9 @@ const Hero = () => {
             <motion.div>
               <motion.img
                 className="w-full max-[1090px]:mb-[20px] max-[700px]:w-[400px] max-[1090px]:w-[500px]"
-                initial={{x:200, opacity:0}} animate={{x:0, opacity: 1}} transition={{duration:.5, delay:0.8}}
+                initial={{ x: 200, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
                 alt="image alt text"
                 src={Dashboard}
                 srcset={mediaDashboard}
@@ -240,9 +242,11 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white max-[600px]:order-2  py-[12px] rounded-[4px] text-black text-center"
               >
-                <Link to="/admin" className="mulish text-[20px] font-semibold">
+            <a href="#requesdemo">
+            <Link to="/admin" className="mulish text-[20px] font-semibold">
                   Demodan bepul foydalanish
                 </Link>
+            </a>
               </motion.div>
 
               <motion.button

@@ -8,6 +8,9 @@ import "./Customers.scss";
 import Customers1 from "../../assets/images/customers1.jpg";
 import Customers2 from "../../assets/images/customers2.jpg";
 import VidePlayer from "../../assets/icons/video-player.svg";
+import Modal from "../../components/Modal/Modal";
+import AstroVideo from "../../assets/Videos/AstroVideo.mp4";
+import ReactPlayer from "react-player/file";
 const Customers = () => {
   const data = [
     { id: 1, image: Customers1 },
@@ -16,6 +19,18 @@ const Customers = () => {
     { id: 4, image: Customers2 },
   ];
 
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+  const handleOverlayClick = () => {
+    closeModal();
+  };
   return (
     <>
       <section className="pb-[60px]">
@@ -42,7 +57,13 @@ const Customers = () => {
                       src={item.image}
                       alt=""
                     />
-                    <img className="absolute" src={VidePlayer} alt="" />
+
+                    <img 
+                      onClick={openModal}
+                      className="absolute cursor-pointer"
+                      src={VidePlayer}
+                      alt=""
+                    />
                   </div>
                 </SwiperSlide>
               ))}
@@ -50,6 +71,24 @@ const Customers = () => {
           </div>
         </div>
       </section>
+
+      <div>
+        {modalOpen && (
+          <div className="overlay" onClick={handleOverlayClick}>
+            <Modal isOpen={modalOpen} onClose={closeModal}>
+              <div className="flex items-center justify-center">
+                <ReactPlayer
+                  width="70%"
+                  height="70%"
+                  url={AstroVideo}
+                  controls={true}
+                  playing={true}
+                />
+              </div>
+            </Modal>
+          </div>
+        )}
+      </div>
     </>
   );
 };

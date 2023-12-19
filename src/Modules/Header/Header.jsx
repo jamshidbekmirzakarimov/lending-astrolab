@@ -8,9 +8,11 @@ import Burger from "../../assets/icons/burger.svg";
 import "./Header.scss";
 import WhiteLogo from "../../assets/icons/white-logo.svg";
 import CloseBurger from "../../assets/icons/close-burger.svg";
+import { languages } from "../../localization/languages";
+import { useLocalization } from "../../hooks/useLocalization";
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
-
+  const [lang, setLang] = useLocalization();
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
@@ -23,7 +25,6 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   let easeing = [0.6, -0.05, 0.01, 0.99];
 
@@ -171,14 +172,16 @@ const Header = () => {
         <div className="container">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <motion.img
-                variants={header}
-                className="me-[40px]"
-                src={AstrolabLogo}
-                alt="astrolab logo"
-                width={137}
-                height={50}
-              />
+              <a href="#">
+                <motion.img
+                  variants={header}
+                  className="me-[40px]"
+                  src={AstrolabLogo}
+                  alt="astrolab logo"
+                  width={137}
+                  height={50}
+                />
+              </a>
               <motion.ul
                 variants={stagger}
                 className="flex items-center max-[1090px]:hidden gap-[60px]"
@@ -188,31 +191,31 @@ const Header = () => {
                     className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
                     href="#"
                   >
-                    About us
+                    {languages[lang].about}
                   </a>
                 </motion.li>
                 <motion.li variants={header}>
                   <a
                     className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
-                    href="#"
+                    href="#Benefits"
                   >
-                    Benefits
+                    {languages[lang].benefits}
                   </a>
                 </motion.li>
                 <motion.li variants={header}>
                   <a
                     className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
-                    href="#"
+                    href="#AstroProduct"
                   >
-                    Products
+                    {languages[lang].products}
                   </a>
                 </motion.li>
                 <motion.li variants={header}>
                   <a
                     className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
-                    href="#"
+                    href="#price"
                   >
-                    Reviews
+                   {languages[lang].price}
                   </a>
                 </motion.li>
               </motion.ul>
@@ -230,17 +233,17 @@ const Header = () => {
                     variants={header}
                     className="px-[24px] border h-[40px] rounded-[8px] mulish font-semibold text-[18px] tracking-[0.9px] border-[#313131] me-[12px]"
                   >
-                    Login
+                    {languages[lang].login}
                   </motion.button>
                 </Link>
-              <a href="#requesdemo">
-              <motion.button
-                  variants={header}
-                  className="mulish font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
-                >
-                  Request a Demo
-                </motion.button>
-              </a>
+                <a href="#requesdemo">
+                  <motion.button
+                    variants={header}
+                    className="mulish font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
+                  >
+                    {languages[lang].Request_a_Demo}
+                  </motion.button>
+                </a>
               </div>
               <button
                 className="bg-black p-[8px] rounded-[50%] hidden max-[1090px]:block"

@@ -45,7 +45,7 @@ const Price = () => {
 
   return (
     <>
-      <section className="pb-[60px] bg-[#F4F4FF]">
+      <section id="price" className="pb-[60px] bg-[#F4F4FF]">
         <div className="pt-[60px] pb-[40px]">
           <div className="container">
             <h2 className="mb-[20px] mulish font-bold text-[40px] text-[#000] leading-normal">

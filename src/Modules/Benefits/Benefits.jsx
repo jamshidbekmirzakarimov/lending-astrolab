@@ -36,7 +36,7 @@ const Benefits = () => {
 
   return (
     <>
-      <section className="pt-[62px] pb-[60px]">
+      <section id="Benefits" className="pt-[62px] pb-[60px]">
         <div className="container">
           <h2 className="mulish font-bold text-[40px] text-black leading-[20px] tracking-[0.5px] mb-[18px] max-[600px]:text-[30px] max-[400px]:text-[24px]">
             Astrolab afzalliklari

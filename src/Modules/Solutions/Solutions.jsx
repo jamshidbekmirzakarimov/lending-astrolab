@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Solutions.scss";
 import Solution from "../../assets/images/solution-img.jpg";
-import { useState } from "react";
 const Solutions = () => {
+  useEffect(() => {
+    const details = Array.from(document.querySelectorAll("details"));
+
+    const handleClick = (targetDetail) => {
+      details.forEach((detail) => {
+        if (detail !== targetDetail) {
+          detail.removeAttribute("open");
+        }
+      });
+    };
+
+    details.forEach((targetDetail) => {
+      targetDetail.addEventListener("click", () => handleClick(targetDetail));
+    });
+
+    return () => {
+      details.forEach((targetDetail) => {
+        targetDetail.removeEventListener("click", () =>
+          handleClick(targetDetail)
+        );
+      });
+    };
+  }, []);
   return (
     <section className=" pt-[146px] pb-[115px] max-[1090px]:pb-[30px] max-[1090px]:pt-[30px] bg-[#F4F4FF] max-[378px]:pt-[100px]">
       <div className="container">
@@ -19,7 +41,7 @@ const Solutions = () => {
             </h2>
             <div className="static max-[700px]:mb-[30px] max-[600px]:mb-[0] max-[1090px]:mb-[30px]">
               <details>
-                <summary className="mb-[-1px]">
+                <summary className="mb-[-1px] relative">
                   <div className="flex items-center justify-between overflow-hidden">
                     <div className="flex items-center gap-[16px]">
                       <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
@@ -31,7 +53,7 @@ const Solutions = () => {
                         Yechimlarning yuqori qiymati
                       </span>
                     </div>
-                    <div class="summary-chevron-up">
+                    <div class="summary-chevron-up absolute right-[30px]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -54,21 +76,20 @@ const Solutions = () => {
                   zarurati.
                 </div>
               </details>
-
               <details>
-                <summary className="mb-[-1px]">
-                  <div className="flex items-center justify-between">
+                <summary className="mb-[-1px] relative">
+                  <div className="flex items-center justify-between overflow-hidden">
                     <div className="flex items-center gap-[16px]">
                       <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
-                        <p className="one-line-title font-semibold text-[12px] text-black ">
+                        <p className="one-line-title font-semibold text-[12px] text-black">
                           2
                         </p>
                       </div>
                       <span class="summary-title">
-                        Murakkab integratsiya jarayoni
+                      Murakkab integratsiya jarayoni
                       </span>
                     </div>
-                    <div class="summary-chevron-up">
+                    <div class="summary-chevron-up absolute right-[30px]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -91,21 +112,20 @@ const Solutions = () => {
                   zarurati.
                 </div>
               </details>
-
               <details>
-                <summary className="mb-[-1px]">
-                  <div className="flex items-center justify-between">
+                <summary className="mb-[-1px] relative">
+                  <div className="flex items-center justify-between overflow-hidden">
                     <div className="flex items-center gap-[16px]">
                       <div className="one-line w-[30px] h-[30px]  rounded-[50%] flex items-center justify-center">
-                        <p className="one-line-title font-semibold text-[12px] text-black ">
+                        <p className="one-line-title font-semibold text-[12px] text-black">
                           3
                         </p>
                       </div>
                       <span class="summary-title">
-                        Investitsiyalar qaytishining uzoq muddati
+                      Investitsiyalar qaytishining uzoq muddati
                       </span>
                     </div>
-                    <div class="summary-chevron-up">
+                    <div class="summary-chevron-up absolute right-[30px]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

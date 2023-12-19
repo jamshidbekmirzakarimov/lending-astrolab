@@ -82,7 +82,7 @@ const RequestDemo = () => {
     <>
       <section id="requesdemo" className="py-[20px] bg-[#F4F4FF]">
         <div className="container">
-          <div className="flex items-center justify-between">
+          <div className="flex items-start justify-between">
             <div>
               <h2 className="mb-[16px] mulish font-semibold text-[40px] text-[#000] leading-normal">
                 Demoni so’rash
@@ -95,24 +95,26 @@ const RequestDemo = () => {
               <p className="mulish text-[20px] font-medium leading-[24px] text-[#000] mb-[23px]">
                 Agar sizda biron bir savol bo’lsa,iltimos biz bilan bog’laning
               </p>
-              <a
-                className="flex items-center gap-[6px] mb-[23px]"
-                href="tel:+998991234567"
-              >
-                <img src={Call} alt="call" />
-                <p className="mulish text-[24px] font-semibold text-[#343A40]">
-                  +998 99 123 45 67
-                </p>
-              </a>
-              <a
-                className="flex items-center gap-[6px]"
-                href="mailto:astrolab@gmail.com"
-              >
-                <img src={Sms} alt="call" />
-                <p className="mulish text-[24px] font-semibold text-[#343A40]">
-                  astrolab@gmail.com
-                </p>
-              </a>
+              <div className="flex items-center gap-[20px]">
+                <a
+                  className="flex items-center gap-[6px]"
+                  href="tel:+998991234567"
+                >
+                  <img src={Call} alt="call" />
+                  <p className="mulish text-[24px] font-semibold text-[#343A40]">
+                    +998 99 123 45 67
+                  </p>
+                </a>
+                <a
+                  className="flex items-center gap-[6px]"
+                  href="mailto:astrolab@gmail.com"
+                >
+                  <img src={Sms} alt="call" />
+                  <p className="mulish text-[24px] font-semibold text-[#343A40]">
+                    astrolab@gmail.com
+                  </p>
+                </a>
+              </div>
             </div>
             <div className="w-[556px] bg-[#fff] rounded-[12px] pt-[30px] px-[40px] pb-[40px]">
               <form className="gap-[20px]">
