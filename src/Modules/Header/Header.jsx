@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import AstrolabLogo from "../../assets/icons/astrolab-logo.svg";
-
 import ChangeLang from "../../components/ChangeLang/ChangeLang";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -10,9 +9,18 @@ import WhiteLogo from "../../assets/icons/white-logo.svg";
 import CloseBurger from "../../assets/icons/close-burger.svg";
 import { languages } from "../../localization/languages";
 import { useLocalization } from "../../hooks/useLocalization";
+import useScroll from "../../hooks/useScroll";
+import useJavaScript from "../../hooks/useJavaScript";
 const Header = () => {
+  const { onActive } = useJavaScript();
+  const [scrollNumber] = useScroll();
   const [hasScrolled, setHasScrolled] = useState(false);
   const [lang, setLang] = useLocalization();
+  const [activeItem, setActiveItem] = useState("Главная");
+
+  const handleClick = (item) => {
+    setActiveItem(item);
+  };
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
@@ -25,6 +33,8 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  console.log(scrollNumber, "bu scroll ekan");
 
   let easeing = [0.6, -0.05, 0.01, 0.99];
 
@@ -164,6 +174,7 @@ const Header = () => {
   return (
     <motion.div initial="initial" animate="animate">
       <motion.header
+      id="header"
         variants={stagger}
         className={`py-[16px] bg-[#fff] flex items-center justify-center fixed w-full z-[9999] ${
           hasScrolled ? "Headershadow" : ""
@@ -187,36 +198,37 @@ const Header = () => {
                 className="flex items-center max-[1090px]:hidden gap-[60px]"
               >
                 <motion.li variants={header}>
-                  <a
-                    className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
-                    href="#"
+                  <p
+                    className="nav-title mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
+                    onClick={(e) => onActive(e, "#header")}
                   >
                     {languages[lang].about}
-                  </a>
+                  </p>
                 </motion.li>
                 <motion.li variants={header}>
-                  <a
-                    className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
-                    href="#Benefits"
+                  <p
+                    className="nav-title mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300 "
+                    onClick={(e) => onActive(e, "#Benefits")}
                   >
                     {languages[lang].benefits}
-                  </a>
+                  </p>
                 </motion.li>
                 <motion.li variants={header}>
-                  <a
-                    className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
-                    href="#AstroProduct"
+                  <p
+                    className="nav-title mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
+                    onClick={(e) => onActive(e, "#AstroProduct")}
                   >
                     {languages[lang].products}
-                  </a>
+                  </p>
                 </motion.li>
                 <motion.li variants={header}>
-                  <a
-                    className="mulish text-[16px] leading-normal font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
-                    href="#price"
+                  <p
+                    className="nav-title mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
+                    onClick={(e) => onActive(e, "#price")}
+
                   >
-                   {languages[lang].price}
-                  </a>
+                    {languages[lang].price}
+                  </p>
                 </motion.li>
               </motion.ul>
             </div>
@@ -236,14 +248,14 @@ const Header = () => {
                     {languages[lang].login}
                   </motion.button>
                 </Link>
-                <a href="#requesdemo">
+                <p onClick={(e) => onActive(e, "#requesdemo")} className="inline-block">
                   <motion.button
                     variants={header}
                     className="mulish font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
                   >
                     {languages[lang].Request_a_Demo}
                   </motion.button>
-                </a>
+                </p>
               </div>
               <button
                 className="bg-black p-[8px] rounded-[50%] hidden max-[1090px]:block"

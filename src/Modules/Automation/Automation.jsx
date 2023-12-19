@@ -4,7 +4,9 @@ import InfoCard from "../../components/Cards/InfoCard/InfoCard";
 import User from "../../assets/icons/mdi_user-tie.svg"
 import DemoButton from "../../UI/DemoButton/DemoButton";
 import TableUser from "../../assets/icons/solar_user-id-bold.svg"
+import useJavaScript from "../../hooks/useJavaScript";
 const Automation = () => {
+
   const benefitsData = [
     {
       icon: User,
@@ -30,7 +32,9 @@ const Automation = () => {
           <div className="flex justify-between">
             <div>
               <img className="mb-[30px]" src={HeroBg} alt="" width={436} height={380} />
+
               <DemoButton/>
+  
             </div>
             <ul className=" flex items-center flex-col gap-[30px]" >
               {benefitsData.map((benefit, index) => (

@@ -5,7 +5,9 @@ import LenfingInput from "../../UI/LenfingInput/LenfingInput";
 import InputMask from "react-input-mask";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useJavaScript from "../../hooks/useJavaScript";
 const RequestDemo = () => {
+  const { onActive } = useJavaScript();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");

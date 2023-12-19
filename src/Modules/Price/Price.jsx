@@ -4,7 +4,9 @@ import ListButton from "../../UI/ListButton/ListButton";
 import ButtonStatik from "../../UI/ButtonStatik/ButtonStatik";
 import Close from "../../assets/icons/close.svg";
 import Check from "../../assets/icons/check.svg";
+import useJavaScript from "../../hooks/useJavaScript";
 const Price = () => {
+  const { onActive } = useJavaScript();
   const simple = [
     { title: "", image: Close },
     { title: "1" },
@@ -146,9 +148,9 @@ const Price = () => {
                     </li>
                   ))}
                 </ul>
-                <a href="#requesdemo">
+                <p onClick={(e) => onActive(e, "#requesdemo")}>
                   <ListButton>Sinab ko'rish</ListButton>
-                </a>
+                </p>
               </div>
 
               <div className="flex items-center justify-center flex-col ">
@@ -186,9 +188,9 @@ const Price = () => {
                     </li>
                   ))}
                 </ul>
-                <a href="#requesdemo">
+                <p onClick={(e) => onActive(e, "#requesdemo")}>
                   <ListButton>Sinab ko'rish</ListButton>
-                </a>
+                </p>
               </div>
 
               <div className="flex items-center justify-center flex-col ">
@@ -226,9 +228,9 @@ const Price = () => {
                     </li>
                   ))}
                 </ul>
-                <a href="#requesdemo">
+                <p onClick={(e) => onActive(e, "#requesdemo")}>
                   <ListButton>Sinab ko'rish</ListButton>
-                </a>
+                </p>
               </div>
             </div>
           </div>
