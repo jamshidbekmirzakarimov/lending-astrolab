@@ -76,9 +76,10 @@ const RequestDemo = () => {
     }
   };
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+ 
+  
+
+  
 
   return (
     <>
@@ -89,7 +90,7 @@ const RequestDemo = () => {
               <h2 className="mb-[16px] mulish font-semibold text-[40px] text-[#000] leading-normal">
                 Demoni so’rash
               </h2>
-              <p className="w-full border-b-[1px] border-[#000] max-w-[562px] mulish font-medium text-[16px] leading-[24px] text-[#00000099] mb-[60px] pb-[60px]">
+              <p className="w-full border-b-[1px] border-[#000] max-w-[562px] mulish font-medium text-[16px] leading-[24px] text-[#00000099] mb-[40px] pb-[40px]">
                 Agar siz Astrolab tiziz haqida ko’proq ma’lumotga ega bo’lishni
                 istasangiz, arizani to’ldiring va 14 kunlik bepul foydalanishga
                 bepul foydalanishga ega bo’ling
@@ -127,6 +128,8 @@ const RequestDemo = () => {
                   type={"text"}
                 />
                 <InputMask
+                min={12}
+                  minLength={30}
                   mask="+\9\9\8\ (99) 999-99-99"
                   maskChar=" "
                   required={true}

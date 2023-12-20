@@ -200,10 +200,7 @@ const Hero = () => {
               </div>
             </motion.div>
             <img
-              className="w-full max-[1090px]:mb-[20px] max-[700px]:w-[400px] max-[1090px]:w-[500px]"
-              initial={{ x: 200, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
+              className="w-[624px] max-[1090px]:mb-[20px] max-[700px]:w-[400px] max-[1090px]:w-[500px]"
               alt="image alt text"
               src={Dashboard}
               srcset={mediaDashboard}

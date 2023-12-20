@@ -39,7 +39,7 @@ const OurClients = () => {
 
   return (
     <>
-      <section className="py-[60px] overflow-hidden">
+      <section className="py-[60px] overflow-hidden" id="ourclients">
         <h2 className="text-center mb-[40px] mulish font-bold text-[40px] text-[#000] leading-normal">
           Biz bilan hamkor kompaniyalar
         </h2>

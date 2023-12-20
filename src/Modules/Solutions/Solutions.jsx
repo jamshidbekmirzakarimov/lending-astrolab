@@ -17,6 +17,9 @@ const Solutions = () => {
       targetDetail.addEventListener("click", () => handleClick(targetDetail));
     });
 
+    // Open the first details element by default
+    details[0].setAttribute("open", "");
+
     return () => {
       details.forEach((targetDetail) => {
         targetDetail.removeEventListener("click", () =>

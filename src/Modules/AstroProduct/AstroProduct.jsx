@@ -34,7 +34,7 @@ const AstroProduct = () => {
   ];
   return (
     <>
-      <section id="AstroProduct" className="pt-[60px] pb-[60px] bg-white">
+      <section id="astroproduct" className="pt-[60px] pb-[60px] bg-white">
         <div className="container">
           <h2 className="mb-[60px] mulish font-bold text-[40px] text-[#000] leading-normal">
             Astrolab mahsulotlari

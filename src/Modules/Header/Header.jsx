@@ -12,7 +12,7 @@ import { useLocalization } from "../../hooks/useLocalization";
 import useScroll from "../../hooks/useScroll";
 import useJavaScript from "../../hooks/useJavaScript";
 const Header = () => {
-  const { onActive, navbarlinksActive } = useJavaScript();
+  const { onActive } = useJavaScript();
   const [scrollNumber] = useScroll();
   const [hasScrolled, setHasScrolled] = useState(false);
   const [lang, setLang] = useLocalization();
@@ -21,24 +21,23 @@ const Header = () => {
   const handleClick = (item) => {
     setActiveItem(item);
   };
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      setHasScrolled(scrollTop > 0);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollTop = window.pageYOffset;
+  //     setHasScrolled(scrollTop > 0);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+  
 
-  console.log(scrollNumber, "bu scroll ekan");
 
-  useEffect(() => {
-    navbarlinksActive()
-  })
+
+ 
   let easeing = [0.6, -0.05, 0.01, 0.99];
 
   const stagger = {
@@ -179,9 +178,7 @@ const Header = () => {
       <motion.header
       id="header"
         variants={stagger}
-        className={`py-[16px] bg-[#fff] flex items-center justify-center fixed w-full z-[9999] ${
-          hasScrolled ? "Headershadow" : ""
-        }`}
+        className={`py-[16px] bg-[#fff] flex items-center justify-center fixed w-full z-[9999] Headershadow`}
       >
         <div className="container">
           <div className="flex items-center justify-between">
@@ -189,7 +186,7 @@ const Header = () => {
               <p onClick={(e) => onActive(e, "#header")}>
                 <motion.img
                   variants={header}
-                  className="me-[40px]"
+                  className="me-[40px] cursor-pointer"
                   src={AstrolabLogo}
                   alt="astrolab logo"
                   width={137}
@@ -202,7 +199,7 @@ const Header = () => {
               >
                 <motion.li variants={header}>
                   <p
-                    className="nav-title mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
+                    className="nav-title header mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[100%] after:duration-300"
                     onClick={(e) => onActive(e, "#header")}
                   >
                     {languages[lang].about}
@@ -210,7 +207,7 @@ const Header = () => {
                 </motion.li>
                 <motion.li variants={header}>
                   <p
-                    className="nav-title mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300 "
+                    className="nav-title Benefits mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[100%] after:duration-300 "
                     onClick={(e) => onActive(e, "#Benefits")}
                   >
                     {languages[lang].benefits}
@@ -218,15 +215,15 @@ const Header = () => {
                 </motion.li>
                 <motion.li variants={header}>
                   <p
-                    className="nav-title mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
-                    onClick={(e) => onActive(e, "#AstroProduct")}
+                    className="nav-title astroproduct mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[100%] after:duration-300"
+                    onClick={(e) => onActive(e, "#astroproduct")}
                   >
                     {languages[lang].products}
                   </p>
                 </motion.li>
                 <motion.li variants={header}>
                   <p
-                    className="nav-title mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[60%] after:duration-300"
+                    className="nav-title price mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[100%] after:duration-300"
                     onClick={(e) => onActive(e, "#price")}
 
                   >

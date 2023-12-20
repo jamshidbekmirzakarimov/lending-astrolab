@@ -13,9 +13,9 @@ const ManageMobileWorker = () => {
           </h2>
           <div className="flex items-start max-[970px]:flex-col-reverse max-[970px]:items-center max-[970px]:justify-center gap-[60px]">
             <div>
-              <ul className="max-w-[626px] h-[528px] flex items-center justify-between flex-col bg-white max-[600px]:bg-transparent pt-[20px] pb-[38px] ps-[28px] rounded-[12px] mb-[40px]">
+              <ul className="max-w-[626px] h-[528px] max-[600px]:h-[100%] flex items-center justify-between flex-col bg-white max-[600px]:bg-transparent pt-[20px] pb-[38px] ps-[28px] max-[600px]:pb-[0px] max-[600px]:pt-[0px] max-[600px]:ps-[0px] rounded-[12px] mb-[40px]">
                 <li className="w-full flex items-center max-[600px]:flex-col max-[600px]:items-start max-[600px]:border-b-[1px] max-[600px]:border-[#D5D5D8] max-[600px]:pb-[12px]   group duration-300 mb-[30px]">
-                  <div className="w-[60px] flex items-center justify-center flex-col max-[600px]:flex-row me-[38px] max-[600px]:justify-start">
+                  <div className="w-[60px] flex items-center justify-center flex-col me-[38px] max-[600px]:flex-row max-[600px]:justify-start max-[600px]:gap-[10px] max-[600px]:mb-[10px]">
                     <div className="text-[#3A3A3A] duration-300 group-hover:text-[#000]">
                       <svg
                         width="61"
@@ -34,13 +34,13 @@ const ManageMobileWorker = () => {
                       Intizom
                     </h3>
                   </div>
-                  <p className="mulish w-full max-w-[451px] text-[#3A3A3A] text-[20px] font-normal leading-[24px] tracking-[0.5px] duration-300 group-hover:text-[#000] ">
+                  <p className="mulish w-full max-w-[451px] max-[600px]:max-w-[100%] text-[#3A3A3A] text-[20px] font-normal leading-[24px] tracking-[0.5px] duration-300 group-hover:text-[#000] ">
                     Ishga kelmaslik holatlari, kechikishlar va ish joyidan erta
                     ketishlarning kamayishi.
                   </p>
                 </li>
-                <li className="w-full flex items-center  group duration-300 mb-[30px]">
-                  <div className="w-[60px] flex items-center flex-col justify-center me-[38px]">
+                <li className="w-full flex items-center max-[600px]:flex-col max-[600px]:items-start max-[600px]:border-b-[1px] max-[600px]:border-[#D5D5D8] max-[600px]:pb-[12px]    group duration-300 mb-[30px]">
+                  <div className="w-[60px] flex items-center flex-col justify-center me-[38px] max-[600px]:flex-row max-[600px]:justify-start  max-[600px]:gap-[10px] max-[600px]:mb-[10px]">
                     <div className=" text-[#3A3A3A] duration-300 group-hover:text-[#000]">
                       <svg
                         width="60"
@@ -60,13 +60,13 @@ const ManageMobileWorker = () => {
                       Mobillik
                     </h3>
                   </div>
-                  <p className="mulish w-full max-w-[341px] text-[#3A3A3A] text-[20px] font-normal leading-[24px] tracking-[0.5px] duration-300 group-hover:text-[#000] ">
+                  <p className="mulish w-full max-w-[341px] max-[600px]:max-w-[100%] text-[#3A3A3A] text-[20px] font-normal leading-[24px] tracking-[0.5px] duration-300 group-hover:text-[#000] ">
                     Dunyoning istalgan nuqtasidagi xodimlarni o‘z telefoningiz
                     orqali boshqaring
                   </p>
                 </li>{" "}
-                <li className="w-full flex items-center group duration-300 mb-[30px]">
-                  <div className="w-[60px] flex items-center flex-col justify-center me-[38px]">
+                <li className="w-full flex items-center max-[600px]:flex-col max-[600px]:items-start max-[600px]:border-b-[1px] max-[600px]:border-[#D5D5D8] max-[600px]:pb-[12px] group duration-300 mb-[30px]">
+                  <div className="w-[60px] flex items-center flex-col justify-center me-[38px]  max-[600px]:flex-row max-[600px]:justify-start  max-[600px]:gap-[10px] max-[600px]:mb-[10px]">
                     <div className=" text-[#3A3A3A] duration-300 group-hover:text-[#000]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -85,13 +85,13 @@ const ManageMobileWorker = () => {
                       Tejamkorlik
                     </h3>
                   </div>
-                  <p className="mulish w-full max-w-[341px] text-[#3A3A3A] text-[20px] font-normal leading-[24px] tracking-[0.5px] duration-300 group-hover:text-[#000] ">
+                  <p className="mulish w-full max-w-[341px] max-[600px]:max-w-[100%] text-[#3A3A3A] text-[20px] font-normal leading-[24px] tracking-[0.5px] duration-300 group-hover:text-[#000] ">
                     Mehnatga haq to‘lash fondini haqiqatdan ham ishlangan vaqtni
                     to‘lash hisobidan kamaytiring.
                   </p>
                 </li>{" "}
-                <li className="w-full flex items-center group duration-300">
-                  <div className="w-[60px] flex items-center flex-col justify-center me-[38px]">
+                <li className="w-full flex items-center max-[600px]:flex-col max-[600px]:items-start max-[600px]:border-b-[1px] max-[600px]:border-[#D5D5D8] max-[600px]:pb-[12px] group duration-300">
+                  <div className="w-[60px] flex items-center flex-col justify-center me-[38px] max-[600px]:flex-row max-[600px]:justify-start  max-[600px]:gap-[10px] max-[600px]:mb-[10px]">
                     <div className=" text-[#3A3A3A] duration-300 group-hover:text-[#000]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@ const ManageMobileWorker = () => {
                       Samaradorlik
                     </h3>
                   </div>
-                  <p className="mulish w-full max-w-[341px] text-[#3A3A3A] text-[20px] font-normal leading-[24px] tracking-[0.5px] duration-300 group-hover:text-[#000] ">
+                  <p className="mulish w-full max-w-[341px] max-[600px]:max-w-[100%] text-[#3A3A3A] text-[20px] font-normal leading-[24px] tracking-[0.5px] duration-300 group-hover:text-[#000] ">
                     Siz hisobotlar va ish jadvalini tuzish ishlariga yiliga
                     yuzlab soatni tejaysiz
                   </p>
