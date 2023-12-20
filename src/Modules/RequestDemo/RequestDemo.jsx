@@ -76,8 +76,8 @@ const RequestDemo = () => {
     }
   };
 
- 
-  
+  const isButtonDisabled = !/^[A-Za-z]+$/.test(firstName) || !lastName || !/\+998 \(\d{2}\) \d{3}-\d{2}-\d{2}/.test(phoneNumber);
+
 
   
 
@@ -147,8 +147,9 @@ const RequestDemo = () => {
                 />
               </form>
               <button
+               disabled={isButtonDisabled}
                 onClick={handleSendMessage}
-                className=" mulish text-[16px] font-semibold leading-[24px] h-[50px] bg-[#000] rounded-[4px] w-full text-[#fff]"
+                className={`${isButtonDisabled ? "opacity-50": "opacity-100"} mulish text-[16px] font-semibold leading-[24px] h-[50px] bg-[#000] rounded-[4px] w-full text-[#fff]`}
               >
                 Yuborish
               </button>
