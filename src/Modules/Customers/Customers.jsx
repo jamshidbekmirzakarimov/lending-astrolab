@@ -58,7 +58,7 @@ const Customers = () => {
                       alt=""
                     />
 
-                    <img 
+                    <img
                       onClick={openModal}
                       className="absolute cursor-pointer"
                       src={VidePlayer}
@@ -78,8 +78,8 @@ const Customers = () => {
             <Modal isOpen={modalOpen} onClose={closeModal}>
               <div className="flex items-center justify-center">
                 <ReactPlayer
-                  width="70%"
-                  height="70%"
+                  width="80%"
+                  height="80%"
                   url={AstroVideo}
                   controls={true}
                   playing={true}
