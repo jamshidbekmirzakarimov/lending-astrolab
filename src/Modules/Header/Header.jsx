@@ -186,7 +186,7 @@ const Header = () => {
               <p onClick={(e) => onActive(e, "#header")}>
                 <motion.img
                   variants={header}
-                  className="me-[40px] cursor-pointer"
+                  className="max-[375px]:w-[110px] max-[375px]:h-[40px] me-[40px] cursor-pointer"
                   src={AstrolabLogo}
                   alt="astrolab logo"
                   width={137}

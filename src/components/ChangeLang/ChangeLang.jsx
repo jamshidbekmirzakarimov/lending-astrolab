@@ -39,7 +39,7 @@ const ChangeLang = () => {
       <div>{getFlagIcon(selectedLang)}</div>
       <select
         id="small"
-        className="block w-[60px] max-[400px]:w-[70px] h-[40px] outline-none p-2 text-sm text-gray-900 rounded-lg bg-white"
+        className="flex items-center justify-center w-[60px] max-[400px]:w-[20px] h-[40px] outline-none p-2 text-sm text-gray-900 rounded-lg bg-white"
         name="language"
         value={selectedLang}
         onChange={handleLangChange}

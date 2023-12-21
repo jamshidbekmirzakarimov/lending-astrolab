@@ -25,7 +25,8 @@ const Lending = () => {
         <Solutions />
         <Benefits />
         <ManageMobileWorker />
-        <Business />
+    <div className="hidden">
+    <Business />
         <Automation />
         <AstroProduct />
         <Price />
@@ -33,8 +34,9 @@ const Lending = () => {
         <Customers />
         <RequestDemo />
         <Social />
+    </div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
