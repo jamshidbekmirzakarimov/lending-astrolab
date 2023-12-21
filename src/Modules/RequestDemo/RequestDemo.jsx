@@ -76,10 +76,10 @@ const RequestDemo = () => {
     }
   };
 
-  const isButtonDisabled = !/^[A-Za-z]+$/.test(firstName) || !lastName || !/\+998 \(\d{2}\) \d{3}-\d{2}-\d{2}/.test(phoneNumber);
-
-
-  
+  const isButtonDisabled =
+    !/^[A-Za-z]+$/.test(firstName.replace(/\s/g, "")) ||
+    !lastName ||
+    !/\+998 \(\d{2}\) \d{3}-\d{2}-\d{2}/.test(phoneNumber);
 
   return (
     <>
@@ -128,7 +128,7 @@ const RequestDemo = () => {
                   type={"text"}
                 />
                 <InputMask
-                min={12}
+                  min={12}
                   minLength={30}
                   mask="+\9\9\8\ (99) 999-99-99"
                   maskChar=" "
@@ -147,9 +147,11 @@ const RequestDemo = () => {
                 />
               </form>
               <button
-               disabled={isButtonDisabled}
+                disabled={isButtonDisabled}
                 onClick={handleSendMessage}
-                className={`${isButtonDisabled ? "opacity-50": "opacity-100"} mulish text-[16px] font-semibold leading-[24px] h-[50px] bg-[#000] rounded-[4px] w-full text-[#fff]`}
+                className={`${
+                  isButtonDisabled ? "opacity-50" : "opacity-100"
+                } mulish text-[16px] font-semibold leading-[24px] h-[50px] bg-[#000] rounded-[4px] w-full text-[#fff]`}
               >
                 Yuborish
               </button>

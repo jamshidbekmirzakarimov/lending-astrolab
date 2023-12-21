@@ -54,17 +54,17 @@ const Footer = () => {
           <div className="flex items-center gap-[12px]">
           <a
               className="flex items-center gap-[6px]"
-              href="tel:+998991234567"
+              href="+998712000321"
             >
               <img src={Call} alt="call" />
-              <p>+998 99 123 45 67</p>
+              <p>+998 71 200-03-21</p>
             </a>
             <a
               className="flex items-center gap-[6px]"
-              href="mailto:astrolab@gmail.com"
+              href="mailto:info@astrolab.uz"
             >
               <img src={Sms} alt="call" />
-              <p>astrolab@gmail.com</p>
+              <p>info@astrolab.uz</p>
             </a>
             <a
               className="flex items-center gap-[6px]"

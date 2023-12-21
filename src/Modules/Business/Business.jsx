@@ -1,11 +1,11 @@
 import React from "react";
 import ProductCard from "../../components/Cards/ProductCard/ProductCard";
-import Ofis from "../../assets/images/ofis.png";
-import Kilinikalar from "../../assets/images/Kilinikalar.png";
-import Talim from "../../assets/images/Talim.png";
-import Sanoat from "../../assets/images/Sanoat.png";
-import Ovqat from "../../assets/images/Ovqat.png";
-import Other from "../../assets/images/Other.png";
+import Ofis from "../../assets/images/Ofis.jpg";
+import Kilinikalar from "../../assets/images/Kilinikalar.jpg";
+import Talim from "../../assets/images/Talim.jpg";
+import Sanoat from "../../assets/images/Sanoat.jpg";
+import Ovqat from "../../assets/images/Ovqat.jpg";
+import Other from "../../assets/images/Other.jpg";
 const Business = () => {
   const benefitsData = [
     {
