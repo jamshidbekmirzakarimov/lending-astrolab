@@ -11,6 +11,7 @@ import { languages } from "../../localization/languages";
 import { useLocalization } from "../../hooks/useLocalization";
 import useScroll from "../../hooks/useScroll";
 import useJavaScript from "../../hooks/useJavaScript";
+
 const Header = () => {
   const { onActive } = useJavaScript();
   const [scrollNumber] = useScroll();
@@ -33,11 +34,7 @@ const Header = () => {
   //     window.removeEventListener("scroll", handleScroll);
   //   };
   // }, []);
-  
 
-
-
- 
   let easeing = [0.6, -0.05, 0.01, 0.99];
 
   const stagger = {
@@ -176,7 +173,7 @@ const Header = () => {
   return (
     <motion.div initial="initial" animate="animate">
       <motion.header
-      id="header"
+        id="header"
         variants={stagger}
         className={`py-[16px] bg-[#fff] flex items-center justify-center fixed w-full z-[9999] Headershadow`}
       >
@@ -225,7 +222,6 @@ const Header = () => {
                   <p
                     className="nav-title price mulish text-[16px] leading-normal cursor-pointer font-normal text-[#464646] duration-300 flex hover:text-[#0B041B] flex-col after:content-[''] after:h-[2px] after:bg-[#000] after:w-[0%] after:hover:w-[100%] after:duration-300"
                     onClick={(e) => onActive(e, "#price")}
-
                   >
                     {languages[lang].price}
                   </p>
@@ -248,7 +244,10 @@ const Header = () => {
                     {languages[lang].login}
                   </motion.button>
                 </Link>
-                <p onClick={(e) => onActive(e, "#requesdemo")} className="inline-block">
+                <p
+                  onClick={(e) => onActive(e, "#requesdemo")}
+                  className="inline-block"
+                >
                   <motion.button
                     variants={header}
                     className="mulish font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
