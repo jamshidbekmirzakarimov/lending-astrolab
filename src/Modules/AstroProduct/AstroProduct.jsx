@@ -1,10 +1,10 @@
 import React from "react";
-import ProductCard from "../../components/Cards/ProductCard/ProductCard";
 
 import WorkTime from "../../assets/icons/work-time.svg";
 import Calendar from "../../assets/icons/calendar.svg";
 import Calc from "../../assets/icons/calc.svg";
 import Tele from "../../assets/icons/bi_telegram.svg";
+import ProductCard2 from "../../components/Cards/ProductCard2/ProductCard2";
 const AstroProduct = () => {
   const benefitsData = [
     {
@@ -34,14 +34,14 @@ const AstroProduct = () => {
   ];
   return (
     <>
-      <section id="astroproduct" className="pt-[60px] pb-[60px] bg-white">
+      <section id="astroproduct" className="pt-[60px] pb-[60px] bg-white max-[600px]:pt-[30px] max-[375px]:pt-[20px]">
         <div className="container">
-          <h2 className="mb-[60px] mulish font-bold text-[40px] text-[#000] leading-normal">
+          <h2 className="mb-[60px] mulish font-bold text-[40px] text-[#000] leading-normal max-[600px]:text-[35px] max-[600px]:mb-[30px] max-[420px]:text-[30px] max-[375px]:text-[24px] max-[375px]:mb-[20px]">
             Astrolab mahsulotlari
           </h2>
           <ul className="w-full justify-between flex items-center flex-wrap gap-[30px]">
             {benefitsData.map((benefit, index) => (
-              <ProductCard
+              <ProductCard2
                 className={"bg-[black]"}
                 key={index}
                 icon={benefit.icon}

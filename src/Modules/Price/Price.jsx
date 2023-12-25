@@ -50,10 +50,10 @@ const Price = () => {
       <section id="price" className="pb-[60px] bg-[#F4F4FF]">
         <div className="pt-[60px] pb-[40px]">
           <div className="container">
-            <h2 className="mb-[20px] mulish font-bold text-[40px] text-[#000] leading-normal">
+            <h2 className="mb-[20px] mulish font-bold text-[40px] text-[#000] leading-normal max-[600px]:text-[35px] max-[450px]:text-[30px] max-[450px]:mb-[10px] max-[]">
               Narxlar
             </h2>
-            <p className="mulish font-semibold leading-[38px] text-[32px] text-black max-w-[994px]">
+            <p className="mulish font-semibold leading-[38px] text-[32px] text-black max-w-[994px] max-[600px]:text-[28px] max-[450px]:text-[24px]">
               Tizimdan foydalanish uchun oylik to'lov tarif rejalariga mos
               ravishda belgilanadi. Agar 17% tejamoqchi bo'lsangiz, bir yilga
               to'lov qilishni tavsiya qilamiz.
@@ -62,7 +62,7 @@ const Price = () => {
         </div>
         <div className="bg-[#fff] pt-[60px] pb-[40px]">
           <div className="container">
-            <div className="flex gap-[27px] justify-between">
+            <div className="flex gap-[27px] justify-center w-full flex-wrap">
               <div className="flex items-center justify-center flex-col ">
                 <div className="h-[116px] flex items-center justify-start flex-col mb-[18px]">
                   <h3 className="mulish mb-[12px] text-black text-[20px] font-bold leading-[18px]">
@@ -96,7 +96,7 @@ const Price = () => {
                   {Data.map((item, index) => (
                     <li
                       key={index}
-                      className="w-[279px] min-h-[60px] border-[1px] border-[D5D5D8] flex items-center justify-center"
+                      className="w-[279px]  min-h-[60px] border-[1px] border-[D5D5D8] flex items-center justify-center"
                     >
                       <div className="flex items-center gap-[6px]">
                         <p className="mulish text-[16px] font-normal leading-[40px]">

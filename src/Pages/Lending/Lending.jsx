@@ -27,10 +27,10 @@ const Lending = () => {
         <ManageMobileWorker />
         <Business />
           <Automation />
-        <div className="hidden">
           <AstroProduct />
           <Price />
           <OurClients />
+        <div className="hidden">
           <Customers />
           <RequestDemo />
           <Social />

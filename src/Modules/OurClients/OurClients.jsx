@@ -52,7 +52,7 @@ const OurClients = () => {
                 </div>
               </li>
             ))}
-          </ul>
+          </ul> 
         </div>
       </section>
     </>
