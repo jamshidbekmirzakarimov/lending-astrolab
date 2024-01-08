@@ -41,16 +41,16 @@ const OurClients = () => {
     <>
       <section className="py-[60px] max-[500px]:py-[40px] overflow-hidden" id="ourclients">
       <div className="container">
-      <h2 className="text-center mb-[40px] mulish font-bold text-[40px] text-[#000] leading-normal max-[600px]:text-[32px] max-[600px]:text-left max-[450px]:text-[28px] max-[450px]:mb-[20px] max-[375px]:text-[24px]">
+      <h2 className="text-center mb-[40px] mulish font-bold text-[40px] text-[#000] leading-normal max-[600px]:text-[32px] max-[600px]:text-left max-[450px]:text-[28px] max-[450px]:mb-[0px] max-[375px]:text-[24px]">
           Biz bilan hamkor kompaniyalar
         </h2>
       </div>
         <div className="marquee" ref={marqueeRef}>
-          <ul className="marquee-content max-[900px]:gap-5">
+          <ul className="marquee-content max-[900px]:gap-5 gap-5 ">
             {data.map((item) => (
               <li key={item.id}>
-                <div className="w-[278px] max-[900px]:max-w-[240px]  h-[128px] max-[400px]:h-[50px] rounded-[12px] border-[1px] border-[#D5D5D8] flex items-center justify-center">
-                  <img src={item.image} alt="" className="max-[450px]:w-[70px]" />
+                <div className="w-[278px] max-[900px]:max-w-[240px] p-[5px] h-[128px] max-[400px]:h-[90px] rounded-[12px] border-[1px] border-[#D5D5D8] flex items-center justify-center">
+                  <img src={item.image} alt="" />
                 </div>
               </li>
             ))}

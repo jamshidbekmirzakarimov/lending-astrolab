@@ -71,7 +71,6 @@
   align-items: center;
   /* text-align: center; */
   flex-shrink: 0;
-  width: var(--marquee-element-width);
 
   font-size: calc(var(--marquee-height) * 3 / 4); /* 5rem; */
   white-space: nowrap;

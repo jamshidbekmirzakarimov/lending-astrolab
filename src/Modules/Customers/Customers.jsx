@@ -35,7 +35,7 @@ const Customers = () => {
     <>
       <section className="pb-[60px]">
         <div className="container">
-          <h2 className="mb-[40px] mulish font-semibold text-[40px] text-[#000] leading-normal">
+          <h2 className="mb-[40px] mulish font-semibold text-[40px] text-[#000] leading-normal max-[660px]:text-[32px] max-[660px]:mb-[30px] max-[450px]:text-[28px] max-[375px]:text-[24px] max-[375px]:mb-[20px]">
             Mijozlarimizni biz haqimizda fikri
           </h2>
 
@@ -59,7 +59,7 @@ const Customers = () => {
             >
               {data.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <div className="max-w-[585px] h-[318px] max-[800px]:h-[250px] max-[600px]:h-[318px] rounded-[12px] border-[1px] border-[#D5D5D8] flex items-center justify-center">
+                  <div className="max-w-[585px] h-[318px] max-[800px]:h-[250px] max-[600px]:h-[318px] max-[520px]:h-[260px] max-[420px]:h-[220px] rounded-[12px] border-[1px] border-[#D5D5D8] flex items-center justify-center">
                     <img
                       className="w-full h-full relative rounded-[12px]"
                       src={item.image}
@@ -68,7 +68,7 @@ const Customers = () => {
 
                     <img
                       onClick={openModal}
-                      className="absolute cursor-pointer"
+                      className="absolute cursor-pointer max-[520px]:w-[50px] max-[520px]:h-[50px] "
                       src={VidePlayer}
                       alt=""
                     />
