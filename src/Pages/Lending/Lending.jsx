@@ -30,8 +30,8 @@ const Lending = () => {
           <AstroProduct />
           <Price />
           <OurClients />
-        <div className="hidden">
           <Customers />
+        <div className="hidden">
           <RequestDemo />
           <Social />
         </div>

@@ -48,12 +48,20 @@ const Customers = () => {
               }}
               modules={[Pagination]}
               className="mySwiper"
+              breakpoints={{
+                600: {
+                  slidesPerView: 2,
+                },
+                200: {
+                  slidesPerView: 1,
+                },
+              }}
             >
               {data.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <div className="w-[585px] h-[318px] rounded-[12px] border-[1px] border-[#D5D5D8] flex items-center justify-center">
+                  <div className="max-w-[585px] h-[318px] max-[800px]:h-[250px] max-[600px]:h-[318px] rounded-[12px] border-[1px] border-[#D5D5D8] flex items-center justify-center">
                     <img
-                      className="relative rounded-[12px]"
+                      className="w-full h-full relative rounded-[12px]"
                       src={item.image}
                       alt=""
                     />

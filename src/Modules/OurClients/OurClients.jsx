@@ -49,7 +49,7 @@ const OurClients = () => {
           <ul className="marquee-content max-[900px]:gap-5">
             {data.map((item) => (
               <li key={item.id}>
-                <div className="w-[278px] max-[900px]:max-w-[240px] h-[128px]  rounded-[12px] border-[1px] border-[#D5D5D8] flex items-center justify-center">
+                <div className="w-[278px] max-[900px]:max-w-[240px]  h-[128px] max-[400px]:h-[50px] rounded-[12px] border-[1px] border-[#D5D5D8] flex items-center justify-center">
                   <img src={item.image} alt="" className="max-[450px]:w-[70px]" />
                 </div>
               </li>
