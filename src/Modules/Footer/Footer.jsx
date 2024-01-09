@@ -7,16 +7,16 @@ const Footer = () => {
   return (
     <footer className="py-[40px] bg-[#F4F4FF]">
       <div className="container">
-        <div className="flex items-center justify-between mb-[20px]">
-          <div className="flex items-center">
+        <div className="flex items-center justify-between mb-[20px] max-[1165px]:flex-col max-[1165px]:justify-start max-[1165px]:items-start max-[1165px]:gap-[10px] max-[480px]:flex-row max-[480px]:justify-between">
+          <div className="flex items-center max-[660px]:flex-col max-[660px]:items-start">
             <img
-              className="me-[40px]"
+              className="me-[40px] max-[480px]:me-[0px]"
               src={AstrolabLogo}
               alt="astrolab logo"
               width={137}
               height={50}
             />
-            <ul className="flex items-center gap-[60px]">
+            <ul className="flex items-center gap-[60px] max-[480px]:flex-col max-[480px]:gap-[15px]">
               <li>
                 <a
                   className="mulish text-[16px] leading-normal font-normal before:content-[''] "
@@ -51,7 +51,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex items-center gap-[12px]">
+          <div className="flex items-center gap-[12px] max-[480px]:flex-col max-[480px]:items-start">
           <a
               className="flex items-center gap-[6px]"
               href="+998712000321"

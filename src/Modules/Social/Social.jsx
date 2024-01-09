@@ -9,7 +9,7 @@ const Social = () => {
     <>
       <section className="pt-[60px] pb-[43px]">
         <div className="container">
-          <ul className="flex items-center justify-between">
+          <ul className="flex items-center justify-between max-[1100px]:flex-wrap max-[1100px]:justify-start max-[1100px]:gap-[20px] max-[1100px]:items-start">
             <li>
               <a
                 className="flex items-center gap-[12px]"

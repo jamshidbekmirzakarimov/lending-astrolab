@@ -85,9 +85,9 @@ const RequestDemo = () => {
     <>
       <section id="requesdemo" className="py-[20px] bg-[#F4F4FF]">
         <div className="container">
-          <div className="flex items-start justify-between">
-            <div>
-              <h2 className="mb-[16px] mulish font-semibold text-[40px] text-[#000] leading-normal">
+          <div className="flex items-start justify-between max-[1100px]:flex-col max-[1100px]:justify-center max-[1100px]:items-center">
+            <div className="mb-[20px]">
+              <h2 className="mb-[16px] mulish font-semibold text-[40px] text-[#000] leading-normal max-[600px]:text-[32px] max-[450px]:text-[28px] max-[375px]:text-[24px] max-[450px]:mb-[5px]">
                 Demoni so’rash
               </h2>
               <p className="w-full border-b-[1px] border-[#000] max-w-[562px] mulish font-medium text-[16px] leading-[24px] text-[#00000099] mb-[40px] pb-[40px]">
@@ -98,13 +98,13 @@ const RequestDemo = () => {
               <p className="mulish text-[20px] font-medium leading-[24px] text-[#000] mb-[23px]">
                 Agar sizda biron bir savol bo’lsa,iltimos biz bilan bog’laning
               </p>
-              <div className="flex items-center gap-[20px]">
+              <div className="flex items-center gap-[20px] max-[580px]:flex-col max-[580px]:items-start max-[580px]:gap-[5px]">
                 <a
                   className="flex items-center gap-[6px]"
                   href="tel:+998991234567"
                 >
                   <img src={Call} alt="call" />
-                  <p className="mulish text-[24px] font-semibold text-[#343A40]">
+                  <p className="mulish text-[24px] max-[450px]:text-[18px] font-semibold text-[#343A40]">
                     +998 99 123 45 67
                   </p>
                 </a>
@@ -113,13 +113,13 @@ const RequestDemo = () => {
                   href="mailto:astrolab@gmail.com"
                 >
                   <img src={Sms} alt="call" />
-                  <p className="mulish text-[24px] font-semibold text-[#343A40]">
+                  <p className="mulish text-[24px] max-[450px]:text-[18px] font-semibold text-[#343A40]">
                     astrolab@gmail.com
                   </p>
                 </a>
               </div>
             </div>
-            <div className="w-[556px] bg-[#fff] rounded-[12px] pt-[30px] px-[40px] pb-[40px]">
+            <div className="w-[556px] max-[580px]:w-full bg-[#fff] rounded-[12px] pt-[30px] max-[450px]:pt-[20px] max-[450px]:px-[20px] max-[450px]:pb-[20px] px-[40px] pb-[40px]">
               <form className="gap-[20px]">
                 <LenfingInput
                   value={firstName}

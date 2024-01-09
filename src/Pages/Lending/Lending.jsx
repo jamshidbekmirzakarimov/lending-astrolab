@@ -31,12 +31,11 @@ const Lending = () => {
           <Price />
           <OurClients />
           <Customers />
-        <div className="hidden">
           <RequestDemo />
           <Social />
-        </div>
+     
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
