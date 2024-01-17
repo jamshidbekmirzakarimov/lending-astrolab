@@ -321,7 +321,14 @@ const Header = () => {
               </a>
             </motion.li>
           </motion.ul>
-          <a href="https://tizim.astrolab.uz/">
+          <div className="flex items-center justify-center pt-[100px] flex-col gap-[15px]">
+            <motion.button
+              variants={header}
+              className="mulish flex items-center justify-center font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
+            >
+              Request a Demo
+            </motion.button>
+            <a href="https://tizim.astrolab.uz/">
                   <motion.button
                     variants={header}
                     className="px-[24px] border h-[40px] rounded-[8px] mulish font-semibold text-[18px] tracking-[0.9px] border-[#313131] me-[12px]"
@@ -329,13 +336,6 @@ const Header = () => {
                     {languages[lang].login}
                   </motion.button>
                 </a>
-          <div className="flex items-center justify-center pt-[100px]">
-            <motion.button
-              variants={header}
-              className="mulish flex items-center justify-center font-semibold text-[18px] tracking-[0.9px] bg-[#000] text-white px-[24px] rounded-[8px] h-[40px]"
-            >
-              Request a Demo
-            </motion.button>
           </div>
         </div>
       </div>
