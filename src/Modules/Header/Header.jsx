@@ -236,14 +236,14 @@ const Header = () => {
                 <ChangeLang />
               </motion.div>
               <div className="max-[670px]:hidden">
-                <Link to="/login">
+                <a href="https://tizim.astrolab.uz/">
                   <motion.button
                     variants={header}
                     className="px-[24px] border h-[40px] rounded-[8px] mulish font-semibold text-[18px] tracking-[0.9px] border-[#313131] me-[12px]"
                   >
                     {languages[lang].login}
                   </motion.button>
-                </Link>
+                </a>
                 <p
                   onClick={(e) => onActive(e, "#requesdemo")}
                   className="inline-block"
